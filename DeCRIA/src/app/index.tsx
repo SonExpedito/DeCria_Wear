@@ -1,15 +1,12 @@
 import React from "react"
-import {View, Text} from "react-native"
-import "../../global.css";
+import {SplashScreen} from "@/pages/SplashScreen/index"
 
 
-export default function Index(){
-    return(
-        <View>
-                <Text className="text-red-600">Alex Expedito</Text>
-            
-        </View>
 
+export default function Index() {
+
+    return (
+        <SplashScreen/>
     )
 
 }

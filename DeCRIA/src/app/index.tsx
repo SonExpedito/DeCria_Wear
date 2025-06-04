@@ -6,7 +6,7 @@ import "../../global.css";
 export default function Index(){
     return(
         <View>
-                <Text>Alex Expedito</Text>
+                <Text className="text-red-600">Alex Expedito</Text>
             
         </View>
 

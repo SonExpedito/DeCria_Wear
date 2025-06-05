@@ -5,12 +5,7 @@ import { useNavigation } from "expo-router";
 
 
 export default function Splash() {
-    const navigation = useNavigation();
-    useEffect(() => {
-        navigation.setOptions({ headerShown: false });
-    }, [navigation]);
 
-    
     return (
         <SplashScreen />
     )

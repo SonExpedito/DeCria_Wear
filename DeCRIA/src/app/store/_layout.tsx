@@ -5,10 +5,20 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import { View, StyleSheet } from 'react-native';
 import React from 'react';
 
-export default function Layout() {
+export default function Navigation() {
   return (
     <View style={styles.container}>
-      <Stack screenOptions={{ headerShown: false }} />
+      <Stack screenOptions={{
+        headerStyle: {
+          backgroundColor: '#1c1c1c',
+        },
+        headerTintColor: '#F5F5F5',
+        headerTitleStyle: {
+          fontWeight: 'bold',
+          fontSize: 28
+        },
+      }}>
+      </Stack>
       <Navbar />
     </View>
   );

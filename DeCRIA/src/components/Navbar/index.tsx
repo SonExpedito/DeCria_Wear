@@ -34,7 +34,7 @@ export default function Navbar() {
         return (
           <TouchableWithoutFeedback
             key={tab.name}
-            onPress={() => router.push(`store/${tab.name}`)}
+            onPress={() => router.replace(`store/${tab.name}`)}
           >
             <Animated.View style={[styles.tabButton, { transform: [{ scale: scaleAnim }] }]}>
               <Icon

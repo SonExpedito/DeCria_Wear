@@ -4,10 +4,10 @@ import React from "react"
 
 
 
-export function HomePage () {
+export function ExplorerPage () {
     return(
         <View>
-            <Text>Home</Text>
+            <Text>Explorer</Text>
         </View>
 
 

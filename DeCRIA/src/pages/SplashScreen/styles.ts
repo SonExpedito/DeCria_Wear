@@ -10,8 +10,6 @@ export const styles = StyleSheet.create({
         elevation: 4,
     },
 
-
-
     lastContainer: {
         backgroundColor: "#151515"
     },

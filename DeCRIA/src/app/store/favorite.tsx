@@ -1,8 +1,10 @@
 import React from "react"
-import {HomePage} from "@/pages/Home"
+import {FavoritesPage} from "@/pages/Favorites"
+
 
 export default function Home() {
+    
     return (
-        <HomePage/>
+        <FavoritesPage/>
     )
 }

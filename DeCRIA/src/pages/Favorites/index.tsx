@@ -4,10 +4,10 @@ import React from "react"
 
 
 
-export function HomePage () {
+export function FavoritesPage () {
     return(
         <View>
-            <Text>Home</Text>
+            <Text>Favoritos</Text>
         </View>
 
 

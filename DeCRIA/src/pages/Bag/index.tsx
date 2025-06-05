@@ -4,10 +4,10 @@ import React from "react"
 
 
 
-export function HomePage () {
+export function BagPage () {
     return(
         <View>
-            <Text>Home</Text>
+            <Text>Cart</Text>
         </View>
 
 

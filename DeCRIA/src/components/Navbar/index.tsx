@@ -40,7 +40,7 @@ export default function Navbar() {
               <Icon
                 name={tab.icon}
                 size={24}
-                color={isActive ? '#000' : '#888'}
+                color={isActive ? '#1c1c1c' : '#888'}
               />
             </Animated.View>
           </TouchableWithoutFeedback>
@@ -54,7 +54,7 @@ const styles = StyleSheet.create({
   tabContainer: {
     flexDirection: 'row',
     justifyContent: 'space-around',
-    backgroundColor: '#f5f5f5',
+    backgroundColor: '#FFFFFF',
     padding: 8,
     borderRadius: 100,
     marginHorizontal: 22,

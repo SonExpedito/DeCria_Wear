@@ -6,7 +6,6 @@ import { Stack, useNavigation } from "expo-router";
 
 export default function Home() {
 
-
     return (
         <HomePage />
     )

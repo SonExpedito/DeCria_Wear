@@ -1,28 +1,27 @@
-import { View, Text } from "react-native"
+import { View, Text, Image, ScrollView } from "react-native"
 import { router, Stack } from "expo-router"
 import React from "react"
-
-
+import { styles } from "./style"
+import card1 from "#/assets/images/carousel/1.png"
+import { Offerproduct } from "./Offerproduct"
 
 export function HomePage() {
     return (
-        <View>
-            <Stack.Screen
-                options={{
-                    title: 'My home',
-                    headerStyle: { backgroundColor: '#f4511e' },
-                    headerTintColor: '#fff',
-                    headerTitleStyle: {
-                        fontWeight: 'bold',
-                    },
+        <>
+            <ScrollView>
+                <View style={styles.carouselContainer} >
 
-                }}
-            />
-            <Text>Home</Text>
-        </View>
+                    <Image style={styles.cardImage} source={card1} />
+                    <Text style={styles.carouselText}>Qual é seu Estilo?</Text>
 
+                </View>
+
+                <Offerproduct />
+            </ScrollView>
+        </>
 
     )
 
 
 }
+

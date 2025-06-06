@@ -2,7 +2,7 @@ import {StyleSheet} from "react-native"
 
 export const universal = StyleSheet.create({
     titulo: {
-        color: "#F5F5F5",
+        color: "#FFFFFF",
         fontWeight: "bold",
         fontSize: 34,
         textAlign: "center"

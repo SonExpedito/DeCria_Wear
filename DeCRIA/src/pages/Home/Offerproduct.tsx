@@ -32,7 +32,7 @@ export function Offerproduct() {
         	    <Text style={styles.subText}>Veste Confiança, Pisa Diferente</Text>
 
                 <View style={{width: "100%", justifyContent: "center", alignItems: "center"}}>
-                        <Button texto="Comprar" className="bg-slate-50 w-1/3"></Button>
+                        <Button texto="Comprar" textColor={1} className="bg-slate-50 w-1/3"></Button>
 
                 </View>
 

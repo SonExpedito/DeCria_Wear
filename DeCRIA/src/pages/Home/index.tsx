@@ -4,6 +4,8 @@ import React from "react"
 import { styles } from "./style"
 import card1 from "#/assets/images/carousel/1.png"
 import { Offerproduct } from "./Offerproduct"
+import { Evom } from "./Evom"
+import { Destaques } from "./Destaques"
 
 export function HomePage() {
     return (
@@ -17,6 +19,8 @@ export function HomePage() {
                 </View>
 
                 <Offerproduct />
+                <Evom/>
+                <Destaques />
             </ScrollView>
         </>
 

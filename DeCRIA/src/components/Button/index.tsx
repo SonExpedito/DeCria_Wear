@@ -10,16 +10,22 @@ import { Float } from "react-native/Libraries/Types/CodegenTypes"
 
 
 type Props = TouchableOpacityProps & {
-    texto: String,
+    texto: string,
+    textColor: number
 }
 
-export function Button({ texto, ...rest }: Props) {
+export function Button({ texto, textColor, ...rest }: Props) {
     return (
         <TouchableOpacity style={styles.button} {...rest}>
-            <Text style={styles.texto}>{texto}</Text>
+            <Text style={[
+                styles.texto,
+                { color: textColor === 1 ? '#1c1c1c' : '#fff' }
+            ]}>
+                {texto}
+            </Text>
+
         </TouchableOpacity>
 
     )
-
 
 }

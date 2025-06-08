@@ -8,17 +8,17 @@ import { artistas } from "../../../assets/images/artists/artistas";
 
 export function Destaques() {
     const marca = [
-        marcas.nike,
-        marcas.puma,
-        marcas.jordan,
-        marcas.adidas,
+        { name: "nike", image: marcas.nike },
+        { name: "puma", image: marcas.puma },
+        { name: "jordan", image: marcas.jordan },
+        { name: "adidas", image: marcas.adidas },
     ];
 
     const referencias = [
         { nome: "veigh", img: artistas.veigh },
         { nome: "teto", img: artistas.teto },
-        { nome: "Dricka", img: artistas.dricka },
-        { nome: "T & T", img: artistas.tt },
+        { nome: "dricka", img: artistas.dricka },
+        { nome: "tt", img: artistas.tt },
     ];
 
     return (
@@ -27,8 +27,13 @@ export function Destaques() {
             <View style={styles.destaqueContainer}>
                 <Text style={styles.destaqueText}>Marca Presença</Text>
                 <View className="flex flex-row flex-wrap justify-between gap-4">
-                    {marca.map((marca, index) => (
-                        <Image key={index} source={marca} style={styles.marcas} />
+                    {marca.map((marcaItem, index) => (
+                        <TouchableOpacity
+                            key={index}
+                            onPress={() => router.navigate(`store/marcas/${marcaItem.name}`)}
+                        >
+                            <Image source={marcaItem.image} style={styles.marcas} />
+                        </TouchableOpacity>
                     ))}
                 </View>
             </View>

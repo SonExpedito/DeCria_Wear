@@ -5,6 +5,8 @@ import teto from "#/assets/images/artists/profile/teto.png"
 
 import veighBanner from "#/assets/images/artists/banners/veighBanner.png"
 import tetoBanner from "#/assets/images/artists/banners/tetoBanner.png"
+import drickaBanner from "#/assets/images/artists/banners/drickaBanner.png"
+import ttBanner from "#/assets/images/artists/banners/ttBanner.png"
 
 
 export const artistas = {
@@ -14,5 +16,7 @@ export const artistas = {
     teto,
 
     veighBanner,
+    drickaBanner,
+    ttBanner,
     tetoBanner,
 } as const;

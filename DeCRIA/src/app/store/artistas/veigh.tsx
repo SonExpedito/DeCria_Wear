@@ -1,4 +1,4 @@
-import { Artista } from "@/pages/Artistas-Marcas/artista";
+import { Artista } from "@/pages/Artistas/artista";
 import React from "react";
 
 export default function Veigh() {

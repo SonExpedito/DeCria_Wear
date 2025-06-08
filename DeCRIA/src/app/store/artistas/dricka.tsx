@@ -1,8 +1,8 @@
 import { Artista } from "@/pages/Artistas/artista";
 import React from "react";
 
-export default function Teto() {
+export default function Dricka() {
     return (
-        <Artista artistaInt={2} />
+        <Artista artistaInt={3} />
     )
 }

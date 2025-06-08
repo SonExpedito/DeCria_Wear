@@ -26,8 +26,18 @@ export default function Navigation() {
             cart: { typeInt: 3, title: 'Sacola' },
             favorite: { typeInt: 3, title: 'Favoritos' },
             user: { typeInt: 3, title: 'Usuário' },
+
+
             'artistas/veigh': { typeInt: 4, title: 'Veigh' },
             'artistas/teto': { typeInt: 4, title: 'Teto' },
+            'artistas/dricka': { typeInt: 4, title: 'Dricka' },
+            'artistas/tt': { typeInt: 4, title: 'TT' },
+
+            'marcas/nike': { typeInt: 4, title: 'Nike' },
+            'marcas/adidas': { typeInt: 4, title: 'Adidas' },
+            'marcas/jordan': { typeInt: 4, title: 'Jordan' },
+            'marcas/puma': { typeInt: 4, title: 'Puma' },
+
           };
 
           const { typeInt = 1, title = '' } = routeOptions[route.name] ?? {};

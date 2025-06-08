@@ -26,7 +26,8 @@ export default function Navigation() {
             cart: { typeInt: 3, title: 'Sacola' },
             favorite: { typeInt: 3, title: 'Favoritos' },
             user: { typeInt: 3, title: 'Usuário' },
-
+            'artistas/veigh': { typeInt: 4, title: 'Veigh' },
+            'artistas/teto': { typeInt: 4, title: 'Teto' },
           };
 
           const { typeInt = 1, title = '' } = routeOptions[route.name] ?? {};

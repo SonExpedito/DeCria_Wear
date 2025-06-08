@@ -19,7 +19,7 @@ export function SplashScreen() {
     return (
         <View style={styles.container}>
             <View className="w-full h-4/6 justify-center items-center">
-                <Image className="w-11/12" source={Banner} accessibilityLabel="Banner" />
+                <Image style={{height: "95%"}} source={Banner} accessibilityLabel="Banner" resizeMode="contain"/>
             </View>
             <View className="w-full h-2/6 items-center justify-center gap-6" style={styles.lastContainer} >
                 <Image className="w-2/5 top-0 absolute " source={logo} accessibilityLabel="Logo" />

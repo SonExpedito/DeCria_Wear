@@ -1,10 +1,15 @@
 import React from "react"
+import { router } from "expo-router"
 import { Text, View, Image } from "react-native"
 import { styles } from "./style"
 import { Button } from "@/components/Button";
 import evom from "#/assets/images/Content/Evom.png"
 
 export function Evom() {
+
+    function handleVeigh(){
+        router.navigate("store/artistas/veigh")
+    }
 
 
     return (
@@ -14,9 +19,9 @@ export function Evom() {
                 Ninguém Segue Sozinho
             </Text>
             <Text style={[styles.subText, { color: "#1c1c1c" }]}>Sempre houve um início</Text>
-            <View style={{ width: "100%", justifyContent: "center", alignItems: "center", flexDirection:"row", gap:12}}>
-                <Button texto="Veigh" textColor={2 } className="bg-gray-900 w-1/4" ></Button>
+            <View style={{ width: "100%", justifyContent: "center", alignItems: "center", flexDirection: "row", gap: 12 }}>
                 <Text style={[styles.subText, { color: "#1c1c1c" }]}>EVOM</Text>
+                <Button texto="Veigh" textColor={2} className="bg-gray-900 w-1/4" onPress={handleVeigh} ></Button>
             </View>
         </View>
     );

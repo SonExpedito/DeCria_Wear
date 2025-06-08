@@ -10,7 +10,7 @@ import { Destaques } from "./Destaques"
 export function HomePage() {
     return (
         <>
-            <ScrollView>
+            <ScrollView style={{ flex: 1, backgroundColor: "#FFF" }}>
                 <View style={styles.carouselContainer} >
 
                     <Image style={styles.cardImage} source={card1} />

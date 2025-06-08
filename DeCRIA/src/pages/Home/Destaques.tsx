@@ -1,21 +1,24 @@
 import React from "react";
-import { Text, View, Image } from "react-native";
+import { Text, View, Image, TouchableOpacity } from "react-native";
 import { styles } from "./style";
-import { images } from "./imagens";
+import { router } from "expo-router";
+
+import { marcas } from "../../../assets/images/marcas/marcas";
+import { artistas } from "../../../assets/images/artists/artistas";
 
 export function Destaques() {
-    const marcas = [
-        images.nike,
-        images.puma,
-        images.jordan,
-        images.adidas,
+    const marca = [
+        marcas.nike,
+        marcas.puma,
+        marcas.jordan,
+        marcas.adidas,
     ];
 
     const referencias = [
-        { nome: "Veigh", img: images.veigh },
-        { nome: "Teto", img: images.teto },
-        { nome: "Dricka", img: images.dricka },
-        { nome: "T & T", img: images.tt },
+        { nome: "veigh", img: artistas.veigh },
+        { nome: "teto", img: artistas.teto },
+        { nome: "Dricka", img: artistas.dricka },
+        { nome: "T & T", img: artistas.tt },
     ];
 
     return (
@@ -24,7 +27,7 @@ export function Destaques() {
             <View style={styles.destaqueContainer}>
                 <Text style={styles.destaqueText}>Marca Presença</Text>
                 <View className="flex flex-row flex-wrap justify-between gap-4">
-                    {marcas.map((marca, index) => (
+                    {marca.map((marca, index) => (
                         <Image key={index} source={marca} style={styles.marcas} />
                     ))}
                 </View>
@@ -38,13 +41,14 @@ export function Destaques() {
                 </Text>
                 <View className="flex flex-row flex-wrap">
                     {referencias.map((ref, index) => (
-                        <View
+                        <TouchableOpacity
                             key={index}
                             className="w-1/2 items-center justify-center mb-4"
+                            onPress={() => router.navigate(`/store/artistas/${ref.nome}`)}
                         >
                             <Image source={ref.img} style={styles.marcas} />
-                            <Text className="text-lg">{ref.nome}</Text>
-                        </View>
+                            <Text className="text-lg capitalize">{ref.nome}</Text>
+                        </TouchableOpacity>
                     ))}
                 </View>
             </View>

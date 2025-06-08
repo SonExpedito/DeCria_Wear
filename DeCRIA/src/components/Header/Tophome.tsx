@@ -7,7 +7,7 @@ import Icon from 'react-native-vector-icons/Ionicons';
 export function Tophome() {
     return (
         <View style={style.home}>
-            <Image className="h-3/5" resizeMode="contain" source={logo} accessibilityLabel="Logo" />
+            <Image className="h-4/5" resizeMode="contain" source={logo} accessibilityLabel="Logo" />
             <Icon className="pr-4" name="search" size={24} color="#1c1c1" />
         </View>
     )

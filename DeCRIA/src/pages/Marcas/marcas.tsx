@@ -2,6 +2,7 @@ import React from "react";
 import { ScrollView, Image, View, Text, TouchableOpacity } from "react-native";
 import { infos } from "./info";
 import { styles } from "./style";
+import ToggleSwitch from "./toggle";
 
 type Props = {
     marcaInt: number;
@@ -22,10 +23,11 @@ export function Marcas({ marcaInt }: Props): React.ReactElement {
             <Text style={styles.desc}>
                 {marca?.desc || "Descrição não disponível."}
             </Text>
+            <View style={styles.produtoContainer}>
+                <ToggleSwitch onToggle={(value) => {
+                }} />
+            </View>
 
-            <TouchableOpacity style={styles.activeButton}>
-                <Text style={styles.activeText}>KITS</Text>
-            </TouchableOpacity>
 
 
         </ScrollView>

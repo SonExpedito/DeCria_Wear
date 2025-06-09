@@ -29,6 +29,7 @@ export const styles = StyleSheet.create({
         width: "100%",
         justifyContent: "center",
         alignItems: "center",
+         marginBottom: 120,
     },
     titulo: {
         fontSize: 24,

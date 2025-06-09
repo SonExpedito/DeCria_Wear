@@ -9,7 +9,7 @@ export const styles = StyleSheet.create({
     },
 
     cardImage: {
-        height: "85%",
+        height: "100%",
         resizeMode: "contain"
     },
 

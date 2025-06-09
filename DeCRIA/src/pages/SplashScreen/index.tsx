@@ -21,11 +21,11 @@ export function SplashScreen() {
             <View className="w-full h-4/6 justify-center items-center">
                 <Image style={{height: "95%"}} source={Banner} accessibilityLabel="Banner" resizeMode="contain"/>
             </View>
-            <View className="w-full h-2/6 items-center justify-center gap-6" style={styles.lastContainer} >
-                <Image className="w-2/5 top-0 absolute " source={logo} accessibilityLabel="Logo" />
+            <View className="w-full h-2/6 items-center justify-center gap-12" style={styles.lastContainer} >
                 <Text style={universal.titulo}>Represente o que lhe define</Text>
                 <Button texto="Acessar" textColor={1} className="bg-white w-2/5" onPress={handleNext} ></Button>
             </View>
+             <Image className="w-2/5 absolute " style={{top: "63%" }} source={logo} accessibilityLabel="Logo" />
         </View>
 
     )

@@ -29,22 +29,12 @@ export const styles = StyleSheet.create({
         width: "100%",
         justifyContent: "center",
         alignItems: "center",
+        marginBottom: 120,
     },
     titulo: {
         fontSize: 24,
         color: "#1c1c1c",
         fontWeight: "bold",
         marginBottom: 20,
-    },
-
-    activeButton: {
-        backgroundColor: '#fff',
-        paddingVertical: 8,
-        paddingHorizontal: 24,
-        borderRadius: 50,
-    },
-    activeText: {
-        fontWeight: 'bold',
-        color: '#000',
     }
 });

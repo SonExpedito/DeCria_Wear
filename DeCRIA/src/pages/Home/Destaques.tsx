@@ -26,10 +26,11 @@ export function Destaques() {
             {/* Seção Marca Presença */}
             <View style={styles.destaqueContainer}>
                 <Text style={styles.destaqueText}>Marca Presença</Text>
-                <View className="flex flex-row flex-wrap justify-between gap-4">
+                <View className="flex flex-row flex-wrap">
                     {marca.map((marcaItem, index) => (
                         <TouchableOpacity
                             key={index}
+                            className="w-1/2 items-center justify-center mb-4"
                             onPress={() => router.navigate(`store/marcas/${marcaItem.name}`)}
                         >
                             <Image source={marcaItem.image} style={styles.marcas} />
@@ -44,14 +45,14 @@ export function Destaques() {
                     Pega a Ref
                     <Text className="font-light text-xl">erência</Text>
                 </Text>
-                <View className="flex flex-row flex-wrap">
+                <View className="flex flex-row flex-wrap ">
                     {referencias.map((ref, index) => (
                         <TouchableOpacity
                             key={index}
                             className="w-1/2 items-center justify-center mb-4"
                             onPress={() => router.navigate(`/store/artistas/${ref.nome}`)}
                         >
-                            <Image source={ref.img} style={styles.marcas} />
+                            <Image source={ref.img} style={styles.artistas} />
                             <Text className="text-lg capitalize">{ref.nome}</Text>
                         </TouchableOpacity>
                     ))}

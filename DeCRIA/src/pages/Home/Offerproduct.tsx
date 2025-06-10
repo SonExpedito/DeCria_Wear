@@ -26,7 +26,7 @@ export function Offerproduct() {
                 </Text>
 
                 <Image
-                    style={{ width: "50%", height: 200, resizeMode: "contain" }}
+                    style={{ width: "72%", height: 200, resizeMode: "contain" }}
                     source={image}
                 />
         	    <Text style={styles.subText}>Veste Confiança, Pisa Diferente</Text>

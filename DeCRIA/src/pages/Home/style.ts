@@ -1,25 +1,9 @@
-import { Text, View, StyleSheet } from "react-native"
+import { artistas } from "#/assets/images/artists/artistas";
+import { StyleSheet } from "react-native"
 
 
 export const styles = StyleSheet.create({
-    carouselContainer: {
-        height: 480,
-        alignItems: "center",
-        gap: 12
-    },
-
-    cardImage: {
-        height: "100%",
-        resizeMode: "contain"
-    },
-
-    carouselText: {
-        fontSize: 24,
-        color: "#1c1c1c",
-        fontWeight: "bold",
-    },
-
-
+ 
     //Produto
 
     offerProductContainer: {
@@ -86,7 +70,12 @@ export const styles = StyleSheet.create({
         columnGap: 0,
     },
     marcas: {
-        height: 100,
+        height: 80,
+        resizeMode: "contain",
+    },
+    
+    artistas: {
+        height: 80,
         resizeMode: "contain",
     },
 

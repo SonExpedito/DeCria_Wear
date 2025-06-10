@@ -14,7 +14,7 @@ export function Evom() {
 
     return (
         <View style={styles.evomCard}>
-            <Image source={evom} style={{ width: "80%", resizeMode: "cover", borderRadius: 40 }} />
+            <Image source={evom} style={{ width: "80%", height: 400, resizeMode: "contain", borderRadius: 40 }} />
             <Text style={styles.evomText}>
                 Ninguém Segue Sozinho
             </Text>

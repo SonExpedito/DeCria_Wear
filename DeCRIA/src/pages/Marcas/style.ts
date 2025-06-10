@@ -4,13 +4,14 @@ import { StyleSheet } from "react-native";
 export const styles = StyleSheet.create({
     imageContainer: {
         width: "100%",
-        height: 460,
+        height: 480,
         justifyContent: "center",
         alignItems: "center",
     },
     image: {
-        height: "98%",
         resizeMode: "contain",
+        width: "98%",
+        height: 420,
     },
     nome: {
         fontSize: 32,
@@ -18,8 +19,7 @@ export const styles = StyleSheet.create({
         fontWeight: "bold",
     },
     desc: {
-        padding: 20,
-        paddingTop: 30,
+        padding: 10,
         paddingBottom: 30,
         fontSize: 20,
         textAlign: "center",

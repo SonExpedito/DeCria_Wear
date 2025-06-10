@@ -38,6 +38,10 @@ export default function Navigation() {
             'marcas/jordan': { typeInt: 4, title: 'Jordan' },
             'marcas/puma': { typeInt: 4, title: 'Puma' },
 
+            'conjuntos/conjuntoNike': { typeInt: 4, title: 'Conjunto Nike' },
+            'conjuntos/conjunstoAdidas': { typeInt: 4, title: 'Conjunto Adidas' },
+            'conjuntos/conjuntoPuma': { typeInt: 4, title: 'Conjunto Jordan' },
+
             'destaques/artistas': { typeInt: 4, title: 'Artistas' },
             'destaques/lancamentos': { typeInt: 4, title: 'Lançamentos' },
             'destaques/ofertas': { typeInt: 4, title: 'Ofertas' },

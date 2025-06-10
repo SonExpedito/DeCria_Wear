@@ -7,9 +7,11 @@ export const styles = StyleSheet.create({
         height: 460,
         justifyContent: "center",
         alignItems: "center",
+        gap: 20,
+        paddingTop: 20,
     },
     image: {
-        height: "98%",
+        height: "90%",
         resizeMode: "contain",
     },
     nome: {

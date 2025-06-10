@@ -3,10 +3,10 @@ import { router } from "expo-router"
 import React from "react"
 import { styles } from "./styles"
 import { categorias } from "./categorias"
+import MyCarousel from "@/components/Carousel"
 
 
 export function ExplorerPage() {
-    const caregoriaImagem = categorias[0].imagem;
 
     return (
         <ScrollView>
@@ -24,9 +24,8 @@ export function ExplorerPage() {
                         />
                     </TouchableOpacity>
                 ))}
-
-
             </View>
+              
         </ScrollView>
     )
 

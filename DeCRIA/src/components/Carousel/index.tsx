@@ -68,7 +68,7 @@ const styles = StyleSheet.create({
   },
 
   cardImage: {
-    height: "80%",
+    height: "88%",
     resizeMode: "contain"
   },
 

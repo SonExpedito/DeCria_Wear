@@ -3,7 +3,7 @@ import React from "react";
 
 export default function ConjuntoPuma() {
     return (
-        <Conjuntos intConjunto={1} />
+        <Conjuntos intConjunto={3} />
     )
 
 }

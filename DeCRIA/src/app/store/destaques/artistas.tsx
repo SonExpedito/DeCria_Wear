@@ -1,4 +1,4 @@
-import { DestaquePage } from "@/pages/Explorer/destaque";
+import { DestaquePage } from "@/pages/Explorer/destaque/destaque";
 import React from "react";
 
 export default function ArtistasDestaques() {

@@ -2,8 +2,8 @@ import { View, Text, ScrollView, TouchableOpacity, Image } from "react-native"
 import { router } from "expo-router"
 import React from "react"
 import { styles } from "./styles"
-import { categorias } from "./categorias"
-import MyCarousel from "@/components/Carousel"
+import { categorias } from "./destaque/categorias"
+import { SliderProduct } from "./sliders"
 
 
 export function ExplorerPage() {
@@ -25,7 +25,9 @@ export function ExplorerPage() {
                     </TouchableOpacity>
                 ))}
             </View>
-              
+
+            <SliderProduct/>
+
         </ScrollView>
     )
 

@@ -1,9 +1,9 @@
 import Conjuntos from "@/pages/Conjuntos/conjuntos";
 import React from "react";
 
-export default function ConjuntoAdidas() {
+export default function ConjuntoEvom() {
     return (
-        <Conjuntos intConjunto={2} />
+        <Conjuntos intConjunto={6} />
     )
 
 }

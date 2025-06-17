@@ -8,7 +8,7 @@ export const style = StyleSheet.create({
     },
 
     imageContainer: {
-        height: 300,
+        height: 220,
         width: '100%',
         justifyContent: 'center',
         alignItems: 'center',
@@ -16,8 +16,8 @@ export const style = StyleSheet.create({
     },
 
     imagePic: {
-        width: 160,
-        height: 160,
+        width: 140,
+        height: 140,
         borderRadius: 90, // metade da largura/altura para formar um círculo
         borderWidth: 3,
         borderColor: '#1C1C1C',
@@ -38,13 +38,13 @@ export const style = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         flexDirection: 'row',
-        marginBottom: 20,
+        marginVertical: 20,
     },
 
     item: {
         flexDirection: 'row',
         alignItems: 'center',
-        paddingVertical: 25,
+        paddingVertical: 20,
         paddingHorizontal: 20,
         borderBottomWidth: 1,
         borderBottomColor: '#eee',

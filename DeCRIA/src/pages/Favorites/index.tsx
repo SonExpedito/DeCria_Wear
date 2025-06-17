@@ -1,4 +1,4 @@
-import { View, Text } from "react-native"
+import { ScrollView, Text } from "react-native"
 import { router } from "expo-router"
 import React from "react"
 
@@ -6,9 +6,9 @@ import React from "react"
 
 export function FavoritesPage () {
     return(
-        <View>
+        <ScrollView style={{backgroundColor: '#FFFFFF'}}>
             <Text>Favoritos</Text>
-        </View>
+        </ScrollView>
 
 
     )

@@ -24,12 +24,12 @@ export function UserPage() {
             </View>
             <View style={style.quickInfoContainer}>
                 <View style={{ alignItems: 'center', gap: 6 }}>
-                    <Icon size={30} name="cube-outline" color="#1c1c1c" />
-                    <Text style={{ color: '#1c1c1c', fontSize: 18 }}>Meus Pedidos</Text>
+                    <Icon size={26} name="file-tray-full-outline" color="#1c1c1c" />
+                    <Text style={{ color: '#1c1c1c', fontSize: 14 }}>Meus Pedidos</Text>
                 </View>
                 <View style={{ alignItems: 'center', gap: 6 }}>
-                    <Icon size={30} name="settings-outline" color="#1c1c1c" />
-                    <Text style={{ color: '#1c1c1c', fontSize: 18 }}>Configurações</Text>
+                    <Icon size={26} name="settings-outline" color="#1c1c1c" />
+                    <Text style={{ color: '#1c1c1c', fontSize: 14 }}>Configurações</Text>
                 </View>
 
             </View>

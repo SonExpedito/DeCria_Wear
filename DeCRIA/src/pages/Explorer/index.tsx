@@ -9,9 +9,9 @@ import { SliderProduct } from "./sliders"
 export function ExplorerPage() {
 
     return (
-        <ScrollView>
+        <ScrollView style={{backgroundColor: '#FFFFFF'}}>
             <View style={styles.topSearchsContainer}>
-                {categorias.map((categoria, index) => (
+                {categorias.map((categoria: { nome: string; imagem: any }, index: number) => (
                     <TouchableOpacity
                         style={styles.destaqueButton}
                         key={index}

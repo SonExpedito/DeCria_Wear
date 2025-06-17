@@ -1,6 +1,6 @@
 import React from 'react';
 import { categorias } from './categorias';
-import { View, Image, StyleSheet, TouchableOpacity, Text } from 'react-native';
+import { View, Image, StyleSheet, TouchableOpacity, Text, ScrollView } from 'react-native';
 import { Novidades, Descontos, referencias } from './itens';
 import { useRouter } from 'expo-router';
 
@@ -20,7 +20,7 @@ export function DestaquePage({ intDestque }: Props) {
     }
 
     return (
-        <>
+       <ScrollView style={{ flex: 1, backgroundColor: "#FFF", gap: 20}}>
             <View style={{ width: "100%", justifyContent: 'center', alignItems: 'center' }}>
                 <Image source={destaque?.imagem} style={styles.image} />
             </View>
@@ -37,15 +37,15 @@ export function DestaquePage({ intDestque }: Props) {
                     </View>
                 ))}
             </View>
-        </>
+        </ScrollView>
     );
 }
 
 
 const styles = StyleSheet.create({
     image: {
-        height: 200,
-        width: "92%",
+        height: 150,
+        width: "100%",
         resizeMode: 'contain',
 
     },

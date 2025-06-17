@@ -61,9 +61,9 @@ const styles = StyleSheet.create({
     },
 
     desc: {
-        padding: 18,
-        paddingTop: 30,
-        paddingBottom: 30,
+        padding: 10,
+        paddingTop: 15,
+        paddingBottom: 20,
         fontSize: 20,
         textAlign: "center",
         color: "#1c1c1c"

@@ -34,7 +34,9 @@ export function SliderProduct() {
                 </View>
                 <Slider data={conjuntoSlider} styleInt={2} />
             </View>
-            <View style={styles.sliderContainer}>
+
+            
+            <View style={[styles.sliderContainer, { paddingBottom: 80 }]}>
                 <View style={{ width: "100%", paddingLeft: 20 }}>
                     <Text style={styles.sliderText}>Navegue pelos Kit</Text>
                 </View>

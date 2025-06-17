@@ -25,7 +25,7 @@ export default function Navigation() {
             explorer: { typeInt: 2, title: 'Destaques' },
             cart: { typeInt: 3, title: 'Sacola' },
             favorite: { typeInt: 3, title: 'Favoritos' },
-            user: { typeInt: 3, title: 'Usuário' },
+            user: { typeInt: 3, title: 'Perfil' },
 
 
             'artistas/veigh': { typeInt: 4, title: 'Veigh' },
@@ -45,7 +45,7 @@ export default function Navigation() {
             'conjuntos/evom': { typeInt: 4, title: 'Evom' },
             'conjuntos/brisainvernal': { typeInt: 4, title: 'Invernal' },
             'conjuntos/feminino': { typeInt: 4, title: 'Feminino' },
-            
+
 
             'destaques/artistas': { typeInt: 4, title: 'Artistas' },
             'destaques/lancamentos': { typeInt: 4, title: 'Lançamentos' },

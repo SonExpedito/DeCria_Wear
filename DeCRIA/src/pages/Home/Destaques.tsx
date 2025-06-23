@@ -6,7 +6,7 @@ import { router } from "expo-router";
 import { marcas } from "../../../assets/images/marcas/marcas";
 import { artistas } from "../../../assets/images/artists/artistas";
 
-export function Destaques() {
+export function Destaques() { 
     const marca = [
         { name: "nike", image: marcas.nike },
         { name: "puma", image: marcas.puma },
@@ -22,8 +22,7 @@ export function Destaques() {
     ];
 
     return (
-        <>
-            {/* Seção Marca Presença */}
+        <View>
             <View style={styles.destaqueContainer}>
                 <Text style={styles.destaqueText}>Marca Presença</Text>
                 <View className="flex flex-row flex-wrap">
@@ -58,6 +57,6 @@ export function Destaques() {
                     ))}
                 </View>
             </View>
-        </>
+        </View>
     );
 }

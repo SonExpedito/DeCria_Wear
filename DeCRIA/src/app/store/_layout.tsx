@@ -26,6 +26,8 @@ export default function Navigation() {
             cart: { typeInt: 3, title: 'Sacola' },
             favorite: { typeInt: 3, title: 'Favoritos' },
             user: { typeInt: 3, title: 'Perfil' },
+            benefits: { typeInt: 4, title: 'Benefícios' },
+
 
 
             'artistas/veigh': { typeInt: 4, title: 'Veigh' },

@@ -29,7 +29,6 @@ export default function Navigation() {
             benefits: { typeInt: 4, title: 'Benefícios' },
 
 
-
             'artistas/veigh': { typeInt: 4, title: 'Veigh' },
             'artistas/teto': { typeInt: 4, title: 'Teto' },
             'artistas/dricka': { typeInt: 4, title: 'Dricka' },
@@ -48,7 +47,6 @@ export default function Navigation() {
             'conjuntos/brisainvernal': { typeInt: 4, title: 'Invernal' },
             'conjuntos/feminino': { typeInt: 4, title: 'Feminino' },
 
-
             'destaques/artistas': { typeInt: 4, title: 'Artistas' },
             'destaques/lancamentos': { typeInt: 4, title: 'Lançamentos' },
             'destaques/ofertas': { typeInt: 4, title: 'Ofertas' },
@@ -58,8 +56,8 @@ export default function Navigation() {
           const { typeInt = 1, title = '' } = routeOptions[route.name] ?? {};
 
           return {
-            header: (props) => (
-              <Header {...props} typeInt={typeInt} title={title} />
+            header: () => (
+              <Header typeInt={typeInt} title={title} />
             ),
           };
         }}

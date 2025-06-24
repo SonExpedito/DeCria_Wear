@@ -1,0 +1,164 @@
+/* ADM DASHBOARD */
+* {
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 90%;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #e9e9e9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* Logo em cima do card */
+.logo {
+  margin-bottom: 20px;
+}
+
+.logo img {
+  width: 160px;
+  height: auto;
+}
+
+/* Card centralizado */
+.card-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+/* Cinza claro - mais abaixo */
+.card-shadow-light {
+  position: absolute;
+  top: 40px; /* mais distante */
+  left: 0;
+  width: 100%;
+  height: 104%;
+  background: #ccc; /* cinza claro */
+  border-radius: 20px;
+  z-index: 0;
+  filter: blur(2px);
+}
+
+/* Cinza escuro - logo abaixo do card */
+.card-shadow-dark {
+  position: absolute;
+  top: 20px;
+  left: 0;
+  width: 100%;
+  height: 105%;
+  background: #555; /* cinza escuro */
+  border-radius: 20px;
+  z-index: 1;
+  filter: blur(2px);
+}
+
+.card {
+  position: relative;
+  background-color: #111;
+  padding: 50px 60px;
+  border-radius: 20px;
+  width: 350px;
+  box-shadow:
+    0 20px 30px rgba(50, 50, 50, 0.7),
+    0 40px 60px rgba(150, 150, 150, 0.5);
+  color: white;
+  text-align: center;
+  z-index: 2;
+}
+
+/* Campos do card */
+.form-group {
+  position: relative;
+  margin-bottom: 25px;
+  text-align: left;
+}
+
+label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  color: white;
+}
+
+/* Campos do card */
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1.5px solid white;
+  font-size: 15px;
+  background-color: #111;  /* mesma cor do card */
+  color: white;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px 40px 10px 10px; /* espaço para o ícone */
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background: #111;
+  color: white;
+}
+
+#togglePassword {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: white;
+}
+
+/* Botão acessar */
+.btn-access {
+  width: 40%;
+  padding: 12px;
+  background: white;
+  color: black;
+  border: none;
+  border-radius: 30px; /* mais arredondado */
+  font-weight: 700;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn-access:hover {
+  background: #ddd;
+}
+
+.bg-img {
+  position: absolute;
+  z-index: 0; /* atrás de tudo */
+  opacity: 0.9; 
+  pointer-events: none; /* garante que não interfiram no clique */
+}
+
+/* Primeira imagem - canto direito superior */
+.img1 {
+  top: 28px;
+  right: -60px;
+  width: 260px;
+}
+
+/* Segunda imagem - canto esquerdo inferior */
+.img2 {
+  bottom: 150px;
+  left: -18px;
+  width: 210px;
+}
+
+/* Terceira imagem - canto direito inferior */
+.img3 {
+  bottom: -70px;
+  right: -60px;
+  left: -150;
+  width: 350px;
+}
+

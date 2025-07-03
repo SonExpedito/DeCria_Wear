@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Novo Produto</title>
+  <link rel="stylesheet" href="criar.css">
+</head>
+<body>
+
+  <header>
+    <a href="../Listar/index.html" class="back-btn">
+      <img src="../assets/voltar.png" alt="Ícone Voltar">
+      Voltar
+    </a>
+
+   <div class="botao" style="--cor:#FF0040">
+      <span class="text-botao">Novo Produto</span>
+      <div class="img-area">
+        <img src="../assets/camiseta.png" alt="Peças">
+      </div>
+    </div>
+    
+    <div class="profile">
+      <img src="../assets/perfil.jpg" alt="Perfil">
+      <span>Funcionário</span>
+    </div>
+  </header>
+
+  <h2>Selecione para Editar</h2>
+
+  <main>
+    <section class="image-section">
+      <div class="main-image">
+        <img id="selected-image" src="" alt="Produto">
+        <button id="edit-image-btn">
+          <img src="../assets/editar.png" alt="Editar" class="icon-edit">
+        </button>
+      </div>
+    </section>
+
+    <section class="form-section">
+      <p style="font-weight: normal; margin-bottom: 8px;">Preencha os campos</p>
+      <form>
+        <label class="input-with-icon">
+          <input type="text" placeholder="Nome">
+          <img src="../assets/nome.png" alt="Ícone Nome" class="icon-small" />
+        </label>
+
+        <label>
+          <div class="price-input">
+            <input type="number" step="0.01" placeholder="0,00">
+              <span>$</span>
+          </div>
+        </label>
+
+        <div class="linha-calcado-marca">
+          <!-- Campo Número do Calçado -->
+          <label class="input-with-icon campo-numero">
+            <input type="number" placeholder="Calçado">
+            <img src="../assets/calçado.png" alt="Ícone Número" class="icon-small" />
+          </label>
+
+          <!-- Campo Marca -->
+          <div class="campo-marca">
+            <div class="select-marca-wrapper">
+              <div id="marca-logo" class="marca-logo"></div>
+              <select id="marca-select" onchange="atualizarLogo()">
+                <option value="nike">Nike</option>
+                <option value="adidas">Adidas</option>
+                <option value="puma">Puma</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <label>Descrição
+          <textarea placeholder="Descrição"></textarea>
+        </label>
+
+        <label>Cores</label>
+        <div class="color-options">
+            <button type="button" class="color-btn" style="background-color: red;"></button>
+          <button type="button" class="color-btn" style="background-color: magenta;"></button>
+          <button type="button" class="color-btn" style="background-color: white; border: 1px solid #ccc;">+</button>
+        </div>
+
+        <div class="form-buttons">
+          <button type="submit" class="add-btn">Adicionar</button>
+          <button type="button" class="cancel-btn">Cancelar</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+<script type="module" src="../carregarProduto.js"></script>
+  <script type="module" src="../firebase.js"></script>
+  <script type="module" src="../editar.js"></script>
+</body>
+</html>

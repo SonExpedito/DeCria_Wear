@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Editar Peças</title>
+  <link rel="stylesheet" href="Listar.css">
+</head>
+
+<body>
+  <header>
+    <a href="../dashboard/index.html" class="back-btn">
+      <img src="../assets/voltar.png" alt="Ícone Voltar">
+      Voltar
+    </a>
+
+    <div class="botao" style="--cor:#FF0040">
+      <span class="text-botao">PEÇAS</span>
+      <div class="img-area">
+        <img src="../assets/camiseta.png" alt="Peças">
+      </div>
+    </div>
+
+    <div class="profile">
+      <img src="../assets/perfil.jpg" alt="Perfil">
+      <span>Funcionário</span>
+    </div>
+  </header>
+
+  <main>
+    <h2>Selecione para Editar</h2>
+
+    <div class="search-box">
+      <input type="text" placeholder="Buscar">
+      <button>
+        <img src="../assets/pesquisar.png" alt="Buscar" class="icon-busca">
+      </button>
+    </div>
+
+    <div class="filters">
+      <button class="filter active">PEÇAS</button>
+      <button class="filter">TÊNIS</button>
+    </div>
+
+    <div class="cards">
+      <div class="card add" id="addCard">
+        <span>+</span>
+        <p>Adicione</p>
+      </div>
+    </div>
+  </main>
+
+  <div class="modal-overlay" id="modalOverlay">
+    <form class="modal-form" id="addProductForm">
+      <h2>Adicionar Produtos</h2>
+      <input type="text" id="productName" placeholder="Nome do produto" required />
+      <input type="file" id="productImage" style="display:none;" accept="image/*" />
+      <div class="image-row">
+        <span>Escolher imagem</span>
+        <img src="" alt="Prévia"
+          style="max-width: 100px; max-height: 100px; display: none; margin: auto;">
+        <button type="button" id="triggerImageBtn">Adicionar imagem</button>
+      </div>
+      <div class="botoes-row">
+        <button type="button" id="closeModal">Cancelar</button>
+        <button type="submit">Salvar</button>
+      </div>
+    </form>
+  </div>
+
+  <script type="module" src="../script.js"></script>
+  <script type="module" src="../firebase.js"></script>
+</body>
+
+</html>

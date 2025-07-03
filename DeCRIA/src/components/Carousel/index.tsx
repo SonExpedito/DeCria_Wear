@@ -1,12 +1,11 @@
 import { router } from 'expo-router';
-import React from 'react';
-import { View, Text, Image, StyleSheet, Dimensions, Touchable, TouchableOpacity } from 'react-native';
-import Carousel from 'react-native-reanimated-carousel';
+import React, { useRef, useEffect } from 'react';
+import { View, Text, Image, StyleSheet, Dimensions, TouchableOpacity, FlatList } from 'react-native';
 
 type carouselData = {
   id: number;
   nome: string;
-  image: any; // tipo que aceita imagens locais ou remotas
+  image: any;
 };
 
 type Props = {
@@ -18,25 +17,54 @@ type Props = {
 const { width: screenWidth } = Dimensions.get('window');
 
 const MyCarousel: React.FC<Props> = ({ data, height = 200, width = screenWidth }) => {
+  const flatListRef = useRef<FlatList>(null);
+  const currentIndexRef = useRef(0);
+  const intervalRef = useRef<NodeJS.Timeout | null>(null);
+
+  const startAutoplay = () => {
+    if (intervalRef.current) return; // evita duplicação
+    intervalRef.current = setInterval(() => {
+      const nextIndex = (currentIndexRef.current + 1) % data.length;
+      flatListRef.current?.scrollToIndex({ index: nextIndex, animated: true });
+      currentIndexRef.current = nextIndex;
+    }, 3000);
+  };
+
+  const stopAutoplay = () => {
+    if (intervalRef.current) {
+      clearInterval(intervalRef.current);
+      intervalRef.current = null;
+    }
+  };
+
+  useEffect(() => {
+    startAutoplay();
+    return () => stopAutoplay(); // limpa no unmount
+  }, []);
+
   return (
     <View style={styles.generalContainerCarousel}>
-      <Carousel
-        loop
-        width={width}
-        height={height}
+      <FlatList
+        ref={flatListRef}
         data={data}
-        style={styles.carouselContainer}
-        autoPlay={true}
-        autoPlayInterval={3000}
-        scrollAnimationDuration={1000}
-        renderItem={({ index }) => {
-          const item = data[index];
-          return (
-            <TouchableOpacity style={styles.itemContainer}  onLongPress={() => router.navigate(`/store/conjuntos/${item.nome}`)}>
-              <Image source={item.image} style={styles.cardImage} />
-            </TouchableOpacity>
-          );
-        }}
+        keyExtractor={(item) => item.id.toString()}
+        horizontal
+        pagingEnabled
+        showsHorizontalScrollIndicator={false}
+        snapToInterval={width}
+        decelerationRate="fast"
+        renderItem={({ item }) => (
+          <TouchableOpacity
+            style={[styles.itemContainer, { width, height }]}
+            onPress={() => router.navigate(`/store/conjuntos/${item.nome}`)}
+          >
+            <Image source={item.image} style={[styles.cardImage, { height: height * 0.88 }]} />
+          </TouchableOpacity>
+        )}
+        onTouchStart={stopAutoplay}
+        onScrollBeginDrag={stopAutoplay}
+        onTouchEnd={startAutoplay}
+        onScrollEndDrag={startAutoplay}
       />
 
       <Text style={styles.carouselText}>Qual é seu Estilo?</Text>
@@ -49,36 +77,23 @@ const styles = StyleSheet.create({
     width: '100%',
     gap: 5,
     paddingBottom: 20,
-
-  }
-  ,
-  carouselContainer: {
-    width: '100%',
-    alignItems: "center",
-    justifyContent: "center",
   },
-
   itemContainer: {
     borderRadius: 8,
     overflow: 'hidden',
-    height: '100%',
-    width: '100%',
     justifyContent: 'center',
     alignItems: 'center',
   },
-
   cardImage: {
-    height: "88%",
-    resizeMode: "contain"
+    width: '100%',
+    resizeMode: 'contain',
   },
-
   carouselText: {
     fontSize: 24,
-    color: "#1c1c1c",
-    fontWeight: "bold",
-    textAlign: "center",
+    color: '#1c1c1c',
+    fontWeight: 'bold',
+    textAlign: 'center',
   },
-
 });
 
 export default MyCarousel;

@@ -1,0 +1,321 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #f7f7f7;
+  color: #333;
+  padding: 20px;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px; /* espaço entre os itens */
+  padding: 0 20px; /* ajuste interno se quiser */
+}
+
+
+.back-btn {
+  background: none;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* BOTAO */
+.botao {
+  background: black;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+  height: 90px;
+  width: 300px;
+  overflow: visible; /* <-- isso é essencial */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  text-decoration: none;
+  color: inherit;
+  margin-bottom: 20px;
+}
+
+
+.text-botao {
+  color: white;
+  font-size: 22px;
+  font-weight: bold;
+  margin-left: 50px;
+  z-index: 2;
+}
+
+.botao::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 90px;
+  height: 100%;
+  background: var(--cor);
+  border-radius: 0 25px 25px 0;
+  z-index: 1;
+}
+
+.img-area {
+  position: absolute;
+  right: -25px;
+  top: -25px;
+  z-index: 2;
+  filter: drop-shadow(0 5px 10px rgba(0,0,0,0.3));
+}
+
+.img-area img {
+  width: 170px; /* <-- aumenta a imagem */
+  height: 150px;
+  object-fit: contain;
+}
+
+/* PERFIL */
+.profile {
+  display: flex;
+  flex-direction: column; /* um em cima do outro */
+  align-items: center;
+}
+
+.profile img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  margin-bottom: 5px;
+  border: 3px solid #000; /* Borda branca */
+
+}
+
+.profile span {
+  font-size: 14px;
+}
+
+/* SEARCH BOX */
+.search-box {
+  display: flex;
+  margin: 0 auto; /* <-- centraliza horizontalmente */
+  margin-bottom: 20px;
+  width: 250px; /* reduzido */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* sombra */
+  border-radius: 8px;
+  overflow: hidden; /* bordas arredondadas */
+}
+
+.search-box button img.icon-busca {
+  width: 20px;  /* ajuste conforme o tamanho do seu ícone */
+  height: 20px;
+}
+
+.search-box input {
+  flex: 1;
+  padding: 8px;
+  border: none; /* remove borda */
+}
+
+.search-box button {
+  padding: 8px;
+  border: none; /* remove borda */
+  background: white;
+  cursor: pointer;
+}
+
+.search-box input:focus {
+  outline: none; /* Remove o contorno padrão */
+  border-radius: 8px; /* Mantém a borda arredondada */
+}
+
+h2 {
+  font-size: 22px;
+  margin-bottom: 30px;
+  text-align: center; /* centraliza o texto horizontalmente */
+  width: 100%; /* garante que o h2 ocupe toda a largura disponível */
+}
+
+.filters {
+  margin-bottom: 20px;
+}
+
+.filter {
+  padding: 8px 16px;
+  margin-right: 10px;
+  border: none;
+  border-radius: 20px;
+  background: #e0e0e0;
+  cursor: pointer;
+}
+
+.filter.active {
+  background: black;
+  color: white;
+}
+
+.cards {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: #000;
+  padding: 15px;
+  border-radius: 15px;
+  width: 160px;
+  text-align: center;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
+    text-decoration: none; /* tira o sublinhado */
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.card p {
+  margin-top: 10px;
+  font-size: 15px;
+  color: white;
+   font-weight: bold; 
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card.add {
+  background: white; /* deixa só o card de adicionar branco */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 32px;
+  color: #000;
+  border: 2px dashed #ccc;
+  cursor: pointer;
+}
+
+.card.add p {
+  color: #000; /* texto mais suave para combinar com o fundo branco */
+}
+
+.back-btn {
+  background: none;
+  text-decoration: none; /* tira o sublinhado */
+  border: none;
+  font-size: 16px;
+  font-weight: bold; 
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px; /* espaço entre o ícone e o texto */
+  color: inherit; /* mesma cor do texto padrão */
+  padding: 0;
+}
+
+.back-btn img {
+  width: 30px;
+  height: 30px;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  background-color: rgba(0,0,0,0.5);
+  display: none; /* modal escondido inicialmente */
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modal-overlay.active {
+  display: flex; /* mostra o modal */
+}
+
+.modal-form {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 400px;
+  width: 90%;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+
+.modal-form input[type="file"],
+.modal-form input[type="text"] {
+  padding: 12px 15px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.modal-form input[type="file"]:focus,
+.modal-form input[type="text"]:focus {
+  outline: none;
+  border-color: #000;
+  box-shadow: 0 0 0 3px rgba(0,0,0,0.1);
+}
+
+/* Botão de adicionar */
+.modal-form button[type="submit"] {
+  background-color: #000;
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  padding: 10px 12px;       /* Reduzido */
+  border-radius: 6px;      /* Menor */
+  font-size: 14px;         /* Menor */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.modal-form button[type="submit"],
+.modal-form button[type="button"] {
+  width: fit-content;
+  align-self: center; /* Centraliza dentro do formulário */
+}
+
+
+.modal-form button[type="submit"]:hover {
+  background-color: #333;
+}
+
+/* Botão cancelar */
+.modal-form button[type="button"] {
+  background: #f2f2f2;
+  border: none;
+  padding: 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  color: #333;
+  transition: background-color 0.3s ease;
+}
+
+.modal-form button[type="button"]:hover {
+  background-color: #ddd;
+}
+
+/* Animação */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

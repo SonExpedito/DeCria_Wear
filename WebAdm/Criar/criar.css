@@ -310,4 +310,18 @@ textarea {
   padding: 4px 8px;
 }
 
+.secondary-img {
+  height: 80px;           /* altura menor */
+  width: auto;            /* largura proporcional */
+  border-radius: 15px;
+  border: 1.5px solid black;
+  object-fit: cover;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+
+.secondary-img:hover {
+  transform: scale(1.05);
+}
 

@@ -319,3 +319,62 @@ h2 {
     transform: translateY(0);
   }
 }
+
+/* Modal de adicionar produto*/
+.images-upload {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin: 15px 0;
+}
+
+.image-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+}
+
+.image-col button {
+  background: #f2f2f2;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 5px;
+  font-size: 13px;
+}
+
+.image-col img {
+  margin-top: 8px;
+  max-width: 100px;
+  max-height: 100px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.modal-form textarea,
+.modal-form input[type="number"] {
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  width: 100%;
+  margin-bottom: 12px;
+  font-size: 15px;
+}
+
+.modal-form textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+/*icone de deletar produtos*/
+.delete-icon {
+  color: #ff4d4d;
+  transition: color 0.3s ease;
+}
+
+.delete-icon:hover {
+  color: #e60000;
+}

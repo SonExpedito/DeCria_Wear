@@ -30,14 +30,20 @@
   <h2>Selecione para Editar</h2>
 
   <main>
-    <section class="image-section">
-      <div class="main-image">
-        <img id="selected-image" src="" alt="Produto">
-        <button id="edit-image-btn">
-          <img src="../assets/editar.png" alt="Editar" class="icon-edit">
-        </button>
-      </div>
-    </section>
+  <section class="image-section">
+    <div class="main-image">
+      <img id="selected-image" src="" alt="Produto" style="max-width: 100%; border-radius: 8px;">
+      <button id="edit-image-btn">
+        <img src="../assets/editar.png" alt="Editar" class="icon-edit">
+      </button>
+    </div>
+
+    <!-- Container para imagens secundárias -->
+    <div id="secondary-images" style="display: flex; gap: 10px; margin-top: 10px;">
+      <!-- As imagens menores serão adicionadas aqui pelo JS -->
+    </div>
+  </section>
+
 
     <section class="form-section">
       <p style="font-weight: normal; margin-bottom: 8px;">Preencha os campos</p>
@@ -49,7 +55,7 @@
 
         <label>
           <div class="price-input">
-            <input type="number" step="0.01" placeholder="0,00">
+          <input type="number" placeholder="Preço" />
               <span>$</span>
           </div>
         </label>

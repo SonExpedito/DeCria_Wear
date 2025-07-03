@@ -1,35 +1,51 @@
-import { View, Text, ScrollView, TouchableOpacity, Image } from "react-native"
-import { router } from "expo-router"
-import React from "react"
-import { styles } from "./styles"
-import { categorias } from "./destaque/categorias"
-import { SliderProduct } from "./sliders"
-
+import {
+  View,
+  ScrollView,
+  TouchableOpacity,
+  Image,
+  Keyboard,
+} from "react-native";
+import { router } from "expo-router";
+import React, { useState } from "react";
+import { styles } from "./styles";
+import { categorias } from "./destaque/categorias";
+import { InputBusca } from "../../components/Search";
+import { SliderProduct } from "./sliders";
 
 export function ExplorerPage() {
+  const [termo, setTermo] = useState("");
 
-    return (
-        <ScrollView style={{backgroundColor: '#FFFFFF'}}>
-            <View style={styles.topSearchsContainer}>
-                {categorias.map((categoria: { nome: string; imagem: any }, index: number) => (
-                    <TouchableOpacity
-                        style={styles.destaqueButton}
-                        key={index}
-                        onPress={() => router.navigate(`store/destaques/${categoria.nome}`)}
-                    >
-                        <Image
-                            source={categoria.imagem}
-                            style={styles.destaqueImage}
-                            resizeMode="contain"
-                        />
-                    </TouchableOpacity>
-                ))}
-            </View>
+  const irParaResultados = () => {
+    if (termo.trim() !== "") {
+      Keyboard.dismiss();
+      router.push({
+        pathname: "/store/product",
+        params: { termo },
+      });
+    }
+  };
 
-            <SliderProduct/>
+  return (
+    <ScrollView style={{ backgroundColor: "#FFFFFF" }}>
+      <InputBusca
+        termo={termo}
+        setTermo={setTermo}
+        onSubmit={irParaResultados}
+      />
 
-        </ScrollView>
-    )
+      <View style={styles.topSearchsContainer}>
+        {categorias.map((categoria, index) => (
+          <TouchableOpacity style={styles.destaqueButton} key={index}>
+            <Image
+              source={categoria.imagem}
+              style={styles.destaqueImage}
+              resizeMode="contain"
+            />
+          </TouchableOpacity>
+        ))}
+      </View>
 
-
+      <SliderProduct />
+    </ScrollView>
+  );
 }

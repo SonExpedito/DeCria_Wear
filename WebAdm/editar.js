@@ -27,8 +27,8 @@ document.addEventListener('DOMContentLoaded', () => {
       nomeInput.value = produto.nome.replace(/_/g, ' ');
       selectedImage.src = produto.imagemUrl;
 
-      if (tipoSelect && produto.tipo) {
-        tipoSelect.value = produto.tipo;
+      if (tipoSelect && produto.type) {
+        tipoSelect.value = produto.type;
       }
 
       if (marcaSelect && produto.marca) {
@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const nomeSanitizado = nome.replace(/\s+/g, '_');
     const imagemUrl = selectedImage.src;
-    const tipo = tipoSelect.value;
+    const type = tipoSelect.value;
     const marca = marcaSelect.value;
 
     try {
@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
         await setDoc(docRef, {
           nome: nomeSanitizado,
           imagemUrl,
-          tipo,
+          type,
           marca,
           atualizadoEm: new Date()
         }, { merge: true });
@@ -82,7 +82,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const docRef = await addDoc(collection(db, "produtos"), {
           nome: nomeSanitizado,
           imagemUrl,
-          tipo,
+          type,
           marca,
           criadoEm: new Date()
         });

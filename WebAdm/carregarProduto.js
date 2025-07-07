@@ -61,10 +61,10 @@ document.addEventListener('DOMContentLoaded', async () => {
         if (precoInput && produto.preco !== undefined) {
           precoInput.value = produto.preco;
         }
-        
+
         const tipoSelect = document.getElementById('productType');
-        if (tipoSelect && produto.tipo) {
-          tipoSelect.value = produto.tipo;
+        if (tipoSelect && produto.type) {
+          tipoSelect.value = produto.type;
         }
 
         // Marca

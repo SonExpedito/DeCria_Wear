@@ -128,7 +128,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const imageFile = fileInput.files[0];
     const imageFile2 = fileInput2.files[0];
     const imageFile3 = fileInput3.files[0];
-    const tipo = document.getElementById("productType").value;
+    const type = document.getElementById("productType").value;
     const marca = document.getElementById("productBrand").value;
     const description = descriptionInput.value.trim();
     const price = parseFloat(priceInput.value);
@@ -145,7 +145,7 @@ document.addEventListener('DOMContentLoaded', () => {
       alert("Preencha a descrição e o preço corretamente.");
       return;
     }
-    if (!tipo || !marca) {
+    if (!type || !marca) {
       alert("Selecione o tipo e a marca do produto.");
       return;
     }
@@ -179,7 +179,7 @@ document.addEventListener('DOMContentLoaded', () => {
         imagemUrl3: imageUrl3,
         descricao: description,
         preco: price,
-        tipo,
+        type,
         marca,
         criadoEm: new Date()
       });
@@ -253,7 +253,7 @@ document.addEventListener('DOMContentLoaded', () => {
         e.stopPropagation();
         if (confirm(`Deseja excluir o produto "${data.nome}"?`)) {
           try {
-            await deleteDoc(doc(db, 'produtos', produtoDoc.id)); // <- Agora está certo!
+            await deleteDoc(doc(db, 'produtos', produtoDoc.id));
             alert('Produto excluído com sucesso!');
             await loadProducts();
           } catch (error) {

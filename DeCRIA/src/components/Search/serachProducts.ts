@@ -6,8 +6,11 @@ export type Produto = {
   id: string;
   nome: string;
   imagemUrl: string;
+  imagemUrl2: string;
+  imagemUrl3: string;
   preco?: number;
   descricao?: string;
+  type: string;
 };
 
 export function useBuscaProdutos(termo: string) {
@@ -29,6 +32,10 @@ export function useBuscaProdutos(termo: string) {
             nome: data.nome,
             preco: data.preco,
             imagemUrl: data.imagemUrl,
+            imagemUrl2: data.imagemUrl2,
+            imagemUrl3: data.imagemUrl3,
+            descricao: data.descricao,
+            type: data.type,
           });
         });
 

@@ -9,10 +9,14 @@ export default function ProductPageContainer() {
   const { productid } = useLocalSearchParams<{ productid: string }>();
 
   const [produto, setProduto] = useState<{
+    id: string;
     nome: string;
     preco: number;
     imagemUrl: string;
+    imagemUrl2: string;
+    imagemUrl3: string;
     descricao: string;
+    type: string;
   } | null>(null);
 
   const [loading, setLoading] = useState(true);
@@ -25,10 +29,14 @@ export default function ProductPageContainer() {
         if (docSnap.exists()) {
           const data = docSnap.data();
           setProduto({
+            id: docSnap.id,
             nome: data.nome,
             preco: data.preco,
             imagemUrl: data.imagemUrl,
+            imagemUrl2: data.imagemUrl2,
+            imagemUrl3: data.imagemUrl3,
             descricao: data.descricao,
+            type: data.type,
           });
         } else {
           console.log("Produto não encontrado.");

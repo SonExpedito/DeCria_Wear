@@ -32,7 +32,7 @@ export function ProductsPage() {
   }
 
   return (
-    <View>
+    <View style={styles.container}>
       <View style={styles.headerVoltar}>
         <TouchableOpacity
           style={styles.botaoVoltar}
@@ -50,7 +50,6 @@ export function ProductsPage() {
       />
 
       <TouchableOpacity onPress={confirmarBusca} style={{ padding: 10 }}>
-        <Text>Buscar</Text>
       </TouchableOpacity>
 
       {produtos.length === 0 && termoBusca.trim().length > 0 ? (
@@ -76,9 +75,13 @@ export function ProductsPage() {
                   router.push({
                     pathname: `/store/product/${item.id}`,
                     params: {
+                      id : item.id,
                       nome: item.nome,
                       preco: item.preco,
                       imagemUrl: item.imagemUrl,
+                      imagemUrl2: item.imagemUrl2,
+                      imagemUrl3: item.imagemUrl3,
+                      type: item.type,
                     },
                   })
                 }

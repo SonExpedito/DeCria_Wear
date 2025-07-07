@@ -27,21 +27,21 @@ document.addEventListener('DOMContentLoaded', async () => {
         const containerSecundarias = document.getElementById('secondary-images');
         containerSecundarias.innerHTML = ''; // limpa antes
 
-      if (produto.imagemUrl2) {
-        const img2 = document.createElement('img');
-        img2.src = produto.imagemUrl2;
-        img2.alt = "Imagem secundária 1";
-        img2.classList.add('secondary-img'); // adiciona a classe
-        containerSecundarias.appendChild(img2);
-      }
+        if (produto.imagemUrl2) {
+          const img2 = document.createElement('img');
+          img2.src = produto.imagemUrl2;
+          img2.alt = "Imagem secundária 1";
+          img2.classList.add('secondary-img'); // adiciona a classe
+          containerSecundarias.appendChild(img2);
+        }
 
-      if (produto.imagemUrl3) {
-        const img3 = document.createElement('img');
-        img3.src = produto.imagemUrl3;
-        img3.alt = "Imagem secundária 2";
-        img3.classList.add('secondary-img'); // adiciona a classe
-        containerSecundarias.appendChild(img3);
-      }
+        if (produto.imagemUrl3) {
+          const img3 = document.createElement('img');
+          img3.src = produto.imagemUrl3;
+          img3.alt = "Imagem secundária 2";
+          img3.classList.add('secondary-img'); // adiciona a classe
+          containerSecundarias.appendChild(img3);
+        }
 
 
         // Nome do produto
@@ -60,6 +60,17 @@ document.addEventListener('DOMContentLoaded', async () => {
         const precoInput = document.querySelector('input[placeholder="Preço"]');
         if (precoInput && produto.preco !== undefined) {
           precoInput.value = produto.preco;
+        }
+        
+        const tipoSelect = document.getElementById('productType');
+        if (tipoSelect && produto.tipo) {
+          tipoSelect.value = produto.tipo;
+        }
+
+        // Marca
+        const marcaSelect = document.getElementById('productBrand');
+        if (marcaSelect && produto.marca) {
+          marcaSelect.value = produto.marca;
         }
 
       } else {

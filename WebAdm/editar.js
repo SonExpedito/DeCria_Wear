@@ -6,6 +6,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const nomeInput = document.querySelector('input[placeholder="Nome"]');
   const selectedImage = document.getElementById('selected-image');
   const cancelBtn = document.querySelector('.cancel-btn');
+  const tipoSelect = document.getElementById('productType');
+  const marcaSelect = document.getElementById('productBrand');
 
   function getProductIdFromURL() {
     const params = new URLSearchParams(window.location.search);
@@ -24,7 +26,14 @@ document.addEventListener('DOMContentLoaded', () => {
       const produto = docSnap.data();
       nomeInput.value = produto.nome.replace(/_/g, ' ');
       selectedImage.src = produto.imagemUrl;
-      // atualize outros campos aqui se houver
+
+      if (tipoSelect && produto.tipo) {
+        tipoSelect.value = produto.tipo;
+      }
+
+      if (marcaSelect && produto.marca) {
+        marcaSelect.value = produto.marca;
+      }
     } else {
       alert('Produto não encontrado.');
     }
@@ -52,6 +61,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const nomeSanitizado = nome.replace(/\s+/g, '_');
     const imagemUrl = selectedImage.src;
+    const tipo = tipoSelect.value;
+    const marca = marcaSelect.value;
 
     try {
       if (productId) {
@@ -60,6 +71,8 @@ document.addEventListener('DOMContentLoaded', () => {
         await setDoc(docRef, {
           nome: nomeSanitizado,
           imagemUrl,
+          tipo,
+          marca,
           atualizadoEm: new Date()
         }, { merge: true });
 
@@ -69,6 +82,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const docRef = await addDoc(collection(db, "produtos"), {
           nome: nomeSanitizado,
           imagemUrl,
+          tipo,
+          marca,
           criadoEm: new Date()
         });
         productId = docRef.id;

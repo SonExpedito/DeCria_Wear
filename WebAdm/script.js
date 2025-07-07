@@ -128,6 +128,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const imageFile = fileInput.files[0];
     const imageFile2 = fileInput2.files[0];
     const imageFile3 = fileInput3.files[0];
+    const tipo = document.getElementById("productType").value;
+    const marca = document.getElementById("productBrand").value;
     const description = descriptionInput.value.trim();
     const price = parseFloat(priceInput.value);
 
@@ -141,6 +143,10 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     if (!description || isNaN(price)) {
       alert("Preencha a descrição e o preço corretamente.");
+      return;
+    }
+    if (!tipo || !marca) {
+      alert("Selecione o tipo e a marca do produto.");
       return;
     }
 
@@ -173,6 +179,8 @@ document.addEventListener('DOMContentLoaded', () => {
         imagemUrl3: imageUrl3,
         descricao: description,
         preco: price,
+        tipo,
+        marca,
         criadoEm: new Date()
       });
 
@@ -212,16 +220,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Adiciona produtos do banco
     const querySnapshot = await getDocs(collection(db, 'produtos'));
-    querySnapshot.forEach((doc) => {
-      const data = doc.data();
+    querySnapshot.forEach((produtoDoc) => {
+      const data = produtoDoc.data();
       const card = document.createElement('div');
       card.className = 'card';
-      card.style.position = 'relative'; // para posicionar o ícone
+      card.style.position = 'relative';
       card.innerHTML = `
-        <img src="${data.imagemUrl}" alt="${data.nome}" />
-        <p>${data.nome}</p>
-        <span class="delete-icon" title="Excluir produto" role="button" tabindex="0">🗑️</span>
-      `;
+    <img src="${data.imagemUrl}" alt="${data.nome}" />
+    <p>${data.nome}</p>
+    <span class="delete-icon" title="Excluir produto" role="button" tabindex="0">🗑️</span>
+  `;
 
       // Apagar produto ao clicar no ícone
       const deleteIcon = card.querySelector('.delete-icon');
@@ -242,10 +250,10 @@ document.addEventListener('DOMContentLoaded', () => {
       });
 
       deleteIcon.addEventListener('click', async (e) => {
-        e.stopPropagation(); // evita o clique abrir a página do produto
+        e.stopPropagation();
         if (confirm(`Deseja excluir o produto "${data.nome}"?`)) {
           try {
-            await deleteDoc(doc(db, 'produtos', doc.id));
+            await deleteDoc(doc(db, 'produtos', produtoDoc.id)); // <- Agora está certo!
             alert('Produto excluído com sucesso!');
             await loadProducts();
           } catch (error) {
@@ -255,9 +263,8 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       });
 
-      // Clique no card abre página de detalhes
       card.addEventListener('click', () => {
-        window.location.href = `../Criar/index.html?id=${doc.id}`;
+        window.location.href = `../Criar/index.html?id=${produtoDoc.id}`;
       });
 
       cardsContainer.appendChild(card);

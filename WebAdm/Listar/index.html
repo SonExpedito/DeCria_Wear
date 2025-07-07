@@ -51,46 +51,60 @@
     </div>
   </main>
 
-<div class="modal-overlay" id="modalOverlay">
- <form class="modal-form" id="addProductForm">
-  <h2>Adicionar Produtos</h2>
+  <div class="modal-overlay" id="modalOverlay">
+    <form class="modal-form" id="addProductForm">
+      <h2>Adicionar Produtos</h2>
 
-  <input type="text" id="productName" placeholder="Nome do produto" required />
+      <input type="text" id="productName" placeholder="Nome do produto" required />
 
-  <div class="images-upload">
-    <!-- Botões para escolher imagens -->
-    <div class="image-col">
-      <span>Imagem 1</span>
-      <button type="button" id="triggerImageBtn">Adicionar</button>
-      <input type="file" id="productImage" accept="image/*" style="display:none;" />
-      <img id="imagePreview" src="" alt="Prévia" style="display: none;">
-    </div>
+      <div class="images-upload">
+        <!-- Botões para escolher imagens -->
+        <div class="image-col">
+          <span>Imagem 1</span>
+          <button type="button" id="triggerImageBtn">Adicionar</button>
+          <input type="file" id="productImage" accept="image/*" style="display:none;" />
+          <img id="imagePreview" src="" alt="Prévia" style="display: none;">
+        </div>
 
-    <div class="image-col">
-      <span>Imagem 2</span>
-      <button type="button" id="triggerImageBtn2">Adicionar</button>
-      <input type="file" id="productImage2" accept="image/*" style="display:none;" />
-      <img id="imagePreview2" src="" alt="Prévia 2" style="display: none;">
-    </div>
+        <div class="image-col">
+          <span>Imagem 2</span>
+          <button type="button" id="triggerImageBtn2">Adicionar</button>
+          <input type="file" id="productImage2" accept="image/*" style="display:none;" />
+          <img id="imagePreview2" src="" alt="Prévia 2" style="display: none;">
+        </div>
 
-    <div class="image-col">
-      <span>Imagem 3</span>
-      <button type="button" id="triggerImageBtn3">Adicionar</button>
-      <input type="file" id="productImage3" accept="image/*" style="display:none;" />
-      <img id="imagePreview3" src="" alt="Prévia 3" style="display: none;">
-    </div>
+        <div class="image-col">
+          <span>Imagem 3</span>
+          <button type="button" id="triggerImageBtn3">Adicionar</button>
+          <input type="file" id="productImage3" accept="image/*" style="display:none;" />
+          <img id="imagePreview3" src="" alt="Prévia 3" style="display: none;">
+        </div>
+      </div>
+
+      <select id="productType" required>
+        <option value="" disabled selected>Tipo do produto</option>
+        <option value="Tênis">Tênis</option>
+        <option value="Roupa">Roupa</option>
+        <option value="Acessório">Acessório</option>
+      </select>
+
+      <select id="productBrand" required>
+        <option value="" disabled selected>Marca do produto</option>
+        <option value="Nike">Nike</option>
+        <option value="Puma">Puma</option>
+        <option value="Adidas">Adidas</option>
+      </select>
+
+      <textarea id="productDescription" placeholder="Descrição do produto" required></textarea>
+      <input type="number" id="productPrice" placeholder="Preço do produto" required step="0.01" min="0" />
+
+      <div class="botoes-row">
+        <button type="button" id="closeModal">Cancelar</button>
+        <button type="submit">Salvar</button>
+      </div>
+    </form>
+
   </div>
-
-  <textarea id="productDescription" placeholder="Descrição do produto" required></textarea>
-  <input type="number" id="productPrice" placeholder="Preço do produto" required step="0.01" min="0" />
-
-  <div class="botoes-row">
-    <button type="button" id="closeModal">Cancelar</button>
-    <button type="submit">Salvar</button>
-  </div>
-</form>
-
-</div>
 
 
   <script type="module" src="../script.js"></script>

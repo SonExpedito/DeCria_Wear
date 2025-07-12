@@ -52,6 +52,31 @@ export const style = StyleSheet.create({
     titulo: {
         fontSize: 18,
         color: '#1c1c1c',
+    },
+
+
+    beneCard: {
+        width: '90%',
+        height: 250,
+        borderRadius: 20,
+        justifyContent: 'center',
+        alignItems: 'center',
+        flexDirection: 'row',
+        overflow: 'hidden',
+    },
+
+    beneTitle: {
+        fontSize: 30,
+        color: '#fff',
+        fontWeight: 'bold',
+        textAlign: 'center',
+
+    },
+
+    beneText: {
+        fontSize: 20,
+        color: '#fff',
+        textAlign: 'center',
     }
 
 

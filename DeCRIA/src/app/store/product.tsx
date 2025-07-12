@@ -1,5 +1,5 @@
 import React from "react";
-import { ProductsPage } from "@/pages/Products";
+import { ProductsPage } from "./product/list";
 
 export default function Products() {
   return <ProductsPage />;

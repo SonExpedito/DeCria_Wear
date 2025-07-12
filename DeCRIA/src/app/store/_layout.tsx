@@ -27,6 +27,11 @@ export default function Navigation() {
             favorite: { typeInt: 3, title: 'Favoritos' },
             user: { typeInt: 3, title: 'Perfil' },
             benefits: { typeInt: 4, title: 'Benefícios' },
+            product: { typeInt: 4, title: 'Produtos' },
+
+            'product/[productid]': { typeInt: 4, title: 'Produto' },
+            'product/list': { typeInt: 4, title: 'Produto' },
+            'product/info': { typeInt: 4, title: 'Produto' },
 
 
             'artistas/veigh': { typeInt: 4, title: 'Veigh' },

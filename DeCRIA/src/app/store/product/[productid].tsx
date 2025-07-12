@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { ActivityIndicator, View, StyleSheet, Text } from "react-native";
 import { useLocalSearchParams } from "expo-router";
-import InfoProduct from "@/pages/Products/infoproduct";
+import InfoProduct from "./produtoinfo";
 import { doc, getDoc } from "firebase/firestore";
 import { db } from "../../../config/firebaseConfig";
 

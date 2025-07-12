@@ -35,7 +35,9 @@ export function ExplorerPage() {
 
       <View style={styles.topSearchsContainer}>
         {categorias.map((categoria, index) => (
-          <TouchableOpacity style={styles.destaqueButton} key={index}>
+          <TouchableOpacity style={styles.destaqueButton} key={index}
+            onPress={() => router.navigate(`store/destaques/${categoria.nome}`)}
+          >
             <Image
               source={categoria.imagem}
               style={styles.destaqueImage}

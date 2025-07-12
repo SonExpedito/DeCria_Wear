@@ -9,11 +9,11 @@ import {
 } from "react-native";
 import { useLocalSearchParams, router } from "expo-router";
 import { Ionicons } from "@expo/vector-icons";
-import { useBuscaProdutos } from "../../components/Search/serachProducts";
-import { InputBusca } from "../../components/Search";
-import { styles } from "./styles";
+import { useBuscaProdutos } from "../../../components/Search/serachProducts";
+import { InputBusca } from "../../../components/Search";
+import { styles } from "@/pages/Products/styles";
 
-export function ProductsPage() {
+export default function ProductsPage() {
   const { termo: termoInicial } = useLocalSearchParams<{ termo: string }>();
   const [termoDigitado, setTermoDigitado] = useState(termoInicial || "");
   const [termoBusca, setTermoBusca] = useState(termoInicial || "");
@@ -33,15 +33,6 @@ export function ProductsPage() {
 
   return (
     <View style={styles.container}>
-      <View style={styles.headerVoltar}>
-        <TouchableOpacity
-          style={styles.botaoVoltar}
-          onPress={() => router.back()}
-        >
-          <Ionicons name="chevron-back-outline" size={30} color="black" />
-          <Text style={styles.textoVoltar}>Voltar</Text>
-        </TouchableOpacity>
-      </View>
 
       <InputBusca
         termo={termoDigitado}
@@ -75,7 +66,7 @@ export function ProductsPage() {
                   router.push({
                     pathname: `/store/product/${item.id}`,
                     params: {
-                      id : item.id,
+                      id: item.id,
                       nome: item.nome,
                       preco: item.preco,
                       imagemUrl: item.imagemUrl,

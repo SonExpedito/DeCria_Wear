@@ -15,7 +15,7 @@ import {
   checkFavorito,
   toggleFavorito,
   Produto,
-} from "./productUtils";
+} from "@/pages/Products/productUtils";
 
 type Props = {
   produto: Produto;
@@ -75,16 +75,7 @@ export default function InfoProduct({ produto }: Props) {
   ].filter(Boolean) as { uri: string }[];
 
   return (
-    <>
       <ScrollView style={styles.container}>
-        {/* Botão voltar */}
-        <TouchableOpacity
-          style={styles.botaoVoltar}
-          onPress={() => router.back()}
-        >
-          <Ionicons name="chevron-back-outline" size={24} color="black" />
-          <Text style={styles.textoVoltar}>Voltar</Text>
-        </TouchableOpacity>
 
         {/* Imagem principal */}
         <TouchableOpacity onPress={() => setIsImageViewerVisible(true)}>
@@ -194,7 +185,6 @@ export default function InfoProduct({ produto }: Props) {
           onRequestClose={() => setIsImageViewerVisible(false)}
         />
       </ScrollView>
-    </>
   );
 }
 

@@ -1,6 +1,11 @@
 import React from "react";
-import { ProductsPage } from "./product/list";
+import ProductsPage from "./product/list";
 
-export default function Products() {
+function Products() {
   return <ProductsPage />;
 }
+
+// Set display name for better debugging
+Products.displayName = 'Products';
+
+export default Products;

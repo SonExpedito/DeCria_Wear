@@ -5,7 +5,7 @@ import InfoProduct from "./produtoinfo";
 import { doc, getDoc } from "firebase/firestore";
 import { db } from "../../../config/firebaseConfig";
 
-export default function ProductPageContainer() {
+function ProductPageContainer() {
   const { productid } = useLocalSearchParams<{ productid: string }>();
 
   const [produto, setProduto] = useState<{
@@ -75,3 +75,8 @@ export default function ProductPageContainer() {
 const styles = StyleSheet.create({
   loading: { flex: 1, justifyContent: "center", alignItems: "center" },
 });
+
+// Set display name for better debugging
+ProductPageContainer.displayName = 'ProductPageContainer';
+
+export default ProductPageContainer;

@@ -21,7 +21,7 @@ type Props = {
   produto: Produto;
 };
 
-export default function InfoProduct({ produto }: Props) {
+function InfoProduct({ produto }: Props) {
   const [corSelecionada, setCorSelecionada] = useState<string | null>(null);
   const [tamanhoSelecionado, setTamanhoSelecionado] = useState<string | number | null>(
     null
@@ -337,3 +337,8 @@ const styles = StyleSheet.create({
     padding: 10,
   },
 });
+
+// Set display name for better debugging
+InfoProduct.displayName = 'InfoProduct';
+
+export default InfoProduct;

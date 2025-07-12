@@ -13,7 +13,7 @@ import { useBuscaProdutos } from "../../../components/Search/serachProducts";
 import { InputBusca } from "../../../components/Search";
 import { styles } from "@/pages/Products/styles";
 
-export default function ProductsPage() {
+function ProductsPage() {
   const { termo: termoInicial } = useLocalSearchParams<{ termo: string }>();
   const [termoDigitado, setTermoDigitado] = useState(termoInicial || "");
   const [termoBusca, setTermoBusca] = useState(termoInicial || "");
@@ -104,3 +104,8 @@ export default function ProductsPage() {
     </View>
   );
 }
+
+// Set display name for better debugging
+ProductsPage.displayName = 'ProductsPage';
+
+export default ProductsPage;

@@ -1,5 +1,5 @@
 import AsyncStorage from "@react-native-async-storage/async-storage";
-import { Alert, Linking } from 'react-native';
+import { Alert, Linking } from "react-native";
 
 export type Produto = {
   id: string;
@@ -10,29 +10,26 @@ export type Produto = {
   imagemUrl3: string;
   descricao: string;
   type: string;
-  link: string;
   itemLink: string;
 };
 
-
 export async function comprarLink(produto: Produto): Promise<boolean> {
   try {
-    const url = produto.itemLink || produto.link;
-    if (!url) {
-      Alert.alert('Indisponível', 'Link de compra não encontrado.');
+    if (!produto.itemLink) {
+      Alert.alert("Indisponível", "Link de compra não encontrado.");
       return false;
     }
 
-    const canOpen = await Linking.canOpenURL(url);
+    const canOpen = await Linking.canOpenURL(produto.itemLink);
     if (!canOpen) {
-      Alert.alert('Erro', 'Não foi possível abrir o link.');
+      Alert.alert("Erro", "Não foi possível abrir o link.");
       return false;
     }
 
-    await Linking.openURL(url);
+    await Linking.openURL(produto.itemLink);
     return true;
   } catch {
-    Alert.alert('Erro', 'Ocorreu um problema ao tentar abrir o link.');
+    Alert.alert("Erro", "Ocorreu um problema ao tentar abrir o link.");
     return false;
   }
 }
@@ -59,6 +56,3 @@ export async function toggleFavorito(
   await AsyncStorage.setItem("favoritos", JSON.stringify(favoritos));
   return !isFavorito;
 }
-
-
-

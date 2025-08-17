@@ -33,15 +33,16 @@ function ProductsPage() {
 
   return (
     <View style={styles.container}>
-
       <InputBusca
         termo={termoDigitado}
         setTermo={setTermoDigitado}
         onSubmit={confirmarBusca}
       />
 
-      <TouchableOpacity onPress={confirmarBusca} style={{ padding: 10 }}>
-      </TouchableOpacity>
+      <TouchableOpacity
+        onPress={confirmarBusca}
+        style={{ padding: 10 }}
+      ></TouchableOpacity>
 
       {produtos.length === 0 && termoBusca.trim().length > 0 ? (
         <View style={styles.center}>
@@ -64,15 +65,16 @@ function ProductsPage() {
                 style={styles.produtoContainer}
                 onPress={() =>
                   router.push({
-                    pathname: `/store/product/${item.id}`,
+                    pathname: "/store/product/[productid]",
                     params: {
-                      id: item.id,
+                      productid: item.id,
                       nome: item.nome,
                       preco: item.preco,
                       imagemUrl: item.imagemUrl,
                       imagemUrl2: item.imagemUrl2,
                       imagemUrl3: item.imagemUrl3,
                       type: item.type,
+                      itemLink: item.itemLink,
                     },
                   })
                 }
@@ -106,6 +108,6 @@ function ProductsPage() {
 }
 
 // Set display name for better debugging
-ProductsPage.displayName = 'ProductsPage';
+ProductsPage.displayName = "ProductsPage";
 
 export default ProductsPage;

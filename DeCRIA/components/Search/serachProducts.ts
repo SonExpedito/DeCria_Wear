@@ -11,6 +11,7 @@ export type Produto = {
   preco?: number;
   descricao?: string;
   type: string;
+  itemLink: string;
 };
 
 export function useBuscaProdutos(termo: string) {
@@ -36,6 +37,7 @@ export function useBuscaProdutos(termo: string) {
             imagemUrl3: data.imagemUrl3,
             descricao: data.descricao,
             type: data.type,
+            itemLink: data.itemLink,
           });
         });
 

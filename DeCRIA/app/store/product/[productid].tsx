@@ -17,6 +17,7 @@ function ProductPageContainer() {
     imagemUrl3: string;
     descricao: string;
     type: string;
+    itemLink: string;
   } | null>(null);
 
   const [loading, setLoading] = useState(true);
@@ -37,6 +38,7 @@ function ProductPageContainer() {
             imagemUrl3: data.imagemUrl3,
             descricao: data.descricao,
             type: data.type,
+            itemLink: data.itemLink,
           });
         } else {
           console.log("Produto não encontrado.");

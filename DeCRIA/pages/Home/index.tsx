@@ -7,8 +7,6 @@ import { Destaques } from "./Destaques"
 import { carouselData } from "./carouselData";
 import MyCarousel from "@/components/Carousel"
 
-
-
 export function HomePage() {
 
     return (

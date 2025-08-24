@@ -12,7 +12,7 @@ type InputBuscaProps = {
 export function InputBusca({
   termo,
   setTermo,
-  placeholder = "Buscar",
+  placeholder,
   onSubmit,
 }: InputBuscaProps) {
   return (

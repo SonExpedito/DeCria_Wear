@@ -1,20 +1,18 @@
 import React from "react";
-import { ScrollView, Image, View, Text, TouchableOpacity } from "react-native";
-import { infos } from "./info";
+import { ScrollView, Image, View, Text } from "react-native";
+import { useInfos } from "./info";
 import { styles } from "./style";
 import ToggleSwitch from "./toggle";
 
 type Props = {
     marcaInt: number;
-}
-
+};
 
 export function Marcas({ marcaInt }: Props): React.ReactElement {
-
+    const infos = useInfos(); // pega array traduzido
     const marca = infos.find((m) => m.int === marcaInt);
 
     return (
-
         <ScrollView style={{ flex: 1, backgroundColor: "#FFF" }}>
             <View style={styles.imageContainer}>
                 <Image source={marca?.banner} style={styles.image} />
@@ -24,13 +22,8 @@ export function Marcas({ marcaInt }: Props): React.ReactElement {
                 {marca?.desc || "Descrição não disponível."}
             </Text>
             <View style={styles.produtoContainer}>
-                <ToggleSwitch onToggle={(value) => {
-                }} />
+                <ToggleSwitch onToggle={(value) => { }} />
             </View>
-
-
-
         </ScrollView>
-
-    )
+    );
 }

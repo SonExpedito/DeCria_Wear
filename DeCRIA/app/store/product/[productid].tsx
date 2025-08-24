@@ -4,9 +4,16 @@ import { useLocalSearchParams } from "expo-router";
 import InfoProduct from "./produtoinfo";
 import { doc, getDoc } from "firebase/firestore";
 import { db } from "../../../config/firebaseConfig";
+import "@/locales/i18n";
+import { useTranslation } from "react-i18next";
 
 function ProductPageContainer() {
   const { productid } = useLocalSearchParams<{ productid: string }>();
+  const { t, i18n } = useTranslation();
+  const toggleLanguage = () => {
+    const newLang = i18n.language === "pt" ? "en" : "pt";
+    i18n.changeLanguage(newLang);
+  };
 
   const [produto, setProduto] = useState<{
     id: string;
@@ -66,7 +73,7 @@ function ProductPageContainer() {
   if (!produto) {
     return (
       <View style={styles.loading}>
-        <Text>Produto não encontrado.</Text>
+        <Text>{t("produtos")}</Text>
       </View>
     );
   }
@@ -79,6 +86,6 @@ const styles = StyleSheet.create({
 });
 
 // Set display name for better debugging
-ProductPageContainer.displayName = 'ProductPageContainer';
+ProductPageContainer.displayName = "ProductPageContainer";
 
 export default ProductPageContainer;

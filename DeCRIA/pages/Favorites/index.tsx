@@ -1,14 +1,10 @@
-import {
-  ScrollView,
-  Text,
-  View,
-  Image,
-  TouchableOpacity,
-} from "react-native";
+import "@/locales/i18n";
+import { AntDesign } from "@expo/vector-icons";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 import { router } from "expo-router";
 import React, { useEffect, useState } from "react";
-import AsyncStorage from "@react-native-async-storage/async-storage";
-import { AntDesign } from "@expo/vector-icons";
+import { useTranslation } from "react-i18next";
+import { Image, ScrollView, Text, TouchableOpacity, View } from "react-native";
 import { styles } from "./style";
 
 type Produto = {
@@ -39,11 +35,18 @@ export function FavoritesPage() {
     await AsyncStorage.setItem("favoritos", JSON.stringify(novosFavoritos));
   };
 
+  const { t, i18n } = useTranslation();
+
+  const toggleLanguage = () => {
+    const newLang = i18n.language === "pt" ? "en" : "pt";
+    i18n.changeLanguage(newLang);
+  };
+
   return (
     <ScrollView style={styles.container}>
       {favoritos.length === 0 ? (
         <Text style={styles.msgVazio}>
-          Você ainda não favoritou nenhum produto.
+          {t('msgVazio')}
         </Text>
       ) : (
         <View style={styles.grid}>
@@ -62,7 +65,7 @@ export function FavoritesPage() {
               >
                 <Image source={{ uri: item.imagemUrl }} style={styles.imagem} />
                 <Text style={styles.nome}>{item.nome}</Text>
-                <Text style={styles.preco}>R$ {item.preco.toFixed(2)}</Text>
+                <Text style={styles.preco}>{t('preco')} {item.preco.toFixed(2)}</Text>
               </TouchableOpacity>
             </View>
           ))}

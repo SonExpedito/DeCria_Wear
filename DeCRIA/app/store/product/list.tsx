@@ -12,12 +12,20 @@ import { Ionicons } from "@expo/vector-icons";
 import { useBuscaProdutos } from "../../../components/Search/serachProducts";
 import { InputBusca } from "../../../components/Search";
 import { styles } from "@/pages/Products/styles";
+import "@/locales/i18n";
+import { useTranslation } from "react-i18next";
 
 function ProductsPage() {
   const { termo: termoInicial } = useLocalSearchParams<{ termo: string }>();
   const [termoDigitado, setTermoDigitado] = useState(termoInicial || "");
   const [termoBusca, setTermoBusca] = useState(termoInicial || "");
   const { produtos, loading } = useBuscaProdutos(termoBusca);
+
+  const { t, i18n } = useTranslation();
+  const toggleLanguage = () => {
+    const newLang = i18n.language === "pt" ? "en" : "pt";
+    i18n.changeLanguage(newLang);
+  };
 
   function confirmarBusca() {
     setTermoBusca(termoDigitado.trim());
@@ -46,11 +54,11 @@ function ProductsPage() {
 
       {produtos.length === 0 && termoBusca.trim().length > 0 ? (
         <View style={styles.center}>
-          <Text>Nenhum produto encontrado para "{termoBusca}"</Text>
+          <Text>{t("produtos2")} "{termoBusca}"</Text>
         </View>
       ) : (
         <>
-          <Text style={styles.h2}>Resultados da Busca:</Text>
+          <Text style={styles.h2}>{t("Busca")}</Text>
           <FlatList
             data={produtos}
             keyExtractor={(item) => item.id}
@@ -93,7 +101,7 @@ function ProductsPage() {
                 <Text style={styles.nomeMarca}>Nike</Text>
                 <Text style={styles.nomeProduto}>{item.nome}</Text>
                 <Text style={styles.preco}>
-                  R${" "}
+                  {t("preco")}
                   {typeof item.preco === "number"
                     ? item.preco.toFixed(2)
                     : "0.00"}

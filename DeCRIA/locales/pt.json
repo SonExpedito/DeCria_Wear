@@ -1,0 +1,125 @@
+{
+  "titulo": "Represente o que lhe define",
+
+  "destqueText": "Marca Presença",
+  "destqueText2": "Pega a Ref",
+  "destqueText3": "erência",
+  "evomText": "Ninguém Segue Sozinho",
+  "subText": "Sempre houve um início",
+  "subText2": "EVOM",
+  "subText3": "Veste Confiança, Pisa Diferente",
+
+  "textPic": "Olá",
+  "subText4": "Meus Benefícios",
+  "subText5": "Meus Pedidos",
+
+  "baneTitle": "Descontos",
+  "baneText": "Sempre as melhores ofertas para você.",
+  "baneTitle2": "Referências",
+  "baneText2": "Demonstrando aquilo que lhe define.",
+
+  "Pecas": "Peças",
+  "Tenis": "Tenis",
+  "Kits": "Kits",
+
+  "msgVazio": "Você ainda não favoritou nenhum produto.",
+  "preco": "R$",
+
+  "sliderText": "Use o que lhe define",
+  "sliderText2": "Navegue pelos Kit",
+
+  "lookTitle": "Gostou do conjunto?",
+  "lookTitle2": "Compre tudo de uma vez",
+
+  "carroselText": "Qual é seu Estilo?",
+
+  "acessar": "Acessar",
+  "comprar": "Comprar",
+  "buscar": "Buscar",
+  "voltar": "Voltar",
+
+  "produtos": "Produto Não Encontrado",
+  "produtos2": "Nenhum produto encontrado para",
+  "busca": "Resultado da Busca:",
+
+  "secoes": {
+    "configuracoes": "Configurações",
+    "portal": "Portal de Autoatendimento",
+    "avaliarApp": "Avalie o aplicativo"
+  },
+  "routes": {
+    "user": "Perfil",
+    "favorite": "Favoritos"
+  },
+
+  "artists": {
+    "veigh": {
+      "desc": "Veigh é o fenômeno do trap brasileiro! Com Dos Prédios Deluxe e milhões de streams, ele tá no topo. 🎤🔥 #Veigh #Trap #MúsicaBrasileira"
+    },
+    "teto": {
+      "desc": "Teto é a voz do trap que não para de crescer! Com hits virais e presença marcante, ele domina as tracks e a cena. 🎶🚀 #Teto #TrapBR #Hitmaker"
+    },
+    "dricka": {
+      "desc": "Dricka é potência no beat e atitude nas rimas! Representando as ruas com autenticidade, ela é destaque do trap feminino e não para de evoluir. 🔥🎤 #Dricka #TrapBR #GirlPower"
+    },
+    "tt": {
+      "desc": "Tasha e Tracie são as gêmeas do som que transformam vivência em arte! Com flows afiados e presença única, elas elevam o trap com estilo e consciência. 👯‍♀️🎧 #TashaETracie #TrapBR #FlowIrmandade"
+    }
+  },
+
+  "conjuntos": {
+    "1": {
+      "nome": "Traje Virgulado",
+      "descricao": "Minimalista com atitude. O Virgulado traz o moletom branco com mangas marcadas por listras diagonais e o icônico swoosh no peito. Com calça preta e boné combinando, é o visual certo pra quem sabe que estilo também é linguagem."
+    },
+    "2": {
+      "nome": "Kit 3 Listras",
+      "descricao": "O clássico das ruas em versão atual. O Kit 3 Listras traz a essência Adidas com jaqueta varsity, camiseta confortável e calça preta — um combo que traduz atitude, versatilidade e aquele visual que nunca sai de cena."
+    },
+    "3": {
+      "nome": "Puma no Peito",
+      "descricao": "Com atitude no olhar e estilo no moletom, o Puma no Peito une conforto e personalidade. A peça em destaque traz o “BLESSED” estampado no peito e representa quem joga firme na moda e na vida. Perfeito pra quem quer vestir inspiração com autenticidade."
+    },
+    "4": {
+      "nome": "Esportivo",
+      "descricao": "Elegância no movimento. O Esportivo traz a polo Nike em tom rosé com corte leve e toque atlético, ideal pra quem valoriza estilo dentro e fora das quadras. Um visual clean, alinhado e cheio de presença."
+    },
+    "5": {
+      "nome": "Jeans Feminino",
+      "descricao": "Look feminino casual e estiloso, com top cropped branco, jaqueta jeans oversized, jogger branca e tênis de cano alto. Ideal para um visual urbano e despojado."
+    },
+    "6": {
+      "nome": "EVOM",
+      "descricao": "Inspirado no álbum que marcou a cena, o look EVOM traduz luxo e vivência. A jaqueta vinho com tachas reflete poder, enquanto os acessórios e o boné “Venci o Mundo” selam a identidade de quem veio da arte e virou referência. Um drop de atitude direto das faixas pra moda."
+    },
+    "7": {
+      "nome": "Invernal",
+      "descricao": "O frio chega, o estilo permanece. O Invernal aposta na jaqueta puffer verde com capuz preto, unindo conforto térmico e presença marcante. Ideal pra quem encara o inverno com personalidade e sem perder o visual."
+    }
+  },
+
+  "produto": {
+    "DN": { "titulo": " - Estilo que fala antes de Você" }
+  },
+  "subText6": "Confira agora",
+  "botaoComprar": "Comprar",
+
+  "marcas": {
+    "1": {
+      "nome": "Nike",
+      "desc": "A Nike é sinônimo de inovação e estilo! Com tecnologia de ponta e presença global, a marca domina as ruas e as quadras. 🏀💨 #Nike #Estilo #Inovação"
+    },
+    "2": {
+      "nome": "Adidas",
+      "desc": "Adidas é tradição e evolução! Referência no esporte e no streetwear, ela transforma cada passo em expressão de estilo. 👟🌍 #Adidas #Originals #StreetStyle"
+    },
+    "3": {
+      "nome": "Puma",
+      "desc": "A Puma une performance e atitude! Com designs modernos e conforto excepcional, a marca conquista quem vive em movimento. 🐆🔥 #Puma #EstiloUrbano #Desempenho"
+    },
+    "4": {
+      "nome": "Jordan Brand",
+      "desc": "Jordan é mais que uma marca — é legado! Inspirada por Michael Jordan, ela eleva o jogo com autenticidade e impacto nas ruas. 🏀👑 #Jordan #AirJordan #Legado"
+    }
+  }
+}

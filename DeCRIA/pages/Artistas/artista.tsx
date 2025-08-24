@@ -2,7 +2,7 @@ import React from "react";
 
 import { ScrollView, View, Image, Text } from "react-native";
 import { styles } from "./style";
-import { perfis } from "./perfis";
+import { usePerfis } from "./perfis";
 import ToggleSwitch from "./toggle";
 
 type Props = {
@@ -11,6 +11,7 @@ type Props = {
 
 
 export function Artista({ artistaInt }: Props) {
+    const perfis = usePerfis();
 
     const perfil = perfis.find((perfil) => perfil.int === artistaInt);
 

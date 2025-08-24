@@ -1,0 +1,125 @@
+{
+  "title": "Represent what defines you",
+
+  "destqueText": "Make Your Mark",
+  "destqueText2": "Catch the Vibe",
+  "destqueText3": "",
+  "evomText": "No One Walks Alone",
+  "subText": "There has always been a beginning",
+  "subText2": "EVOM",
+  "subText3": "Wear Confidence, Step Differently",
+
+  "textPic": "Hello",
+  "subText4": "My Benefits",
+  "subText5": "My Orders",
+
+  "baneTitle": "Discounts",
+  "baneText": "Always the best deals for you.",
+  "baneTitle2": "References",
+  "baneText2": "Showcasing what defines you.",
+
+  "Pecas": "Clothing",
+  "Tenis": "Sneakers",
+  "Kits": "Outfit",
+
+  "msgVazio": "You haven’t favorited any products yet.",
+  "preco": "$",
+
+  "sliderText": "Wear what defines you",
+  "sliderText2": "Browse the Kits",
+
+  "lookTitle": "Liked the outfit?",
+  "lookTitle2": "Buy everything at once",
+
+  "carroselText": "What's your fashion style?",
+
+  "acessar": "Access",
+  "comprar": "Buy",
+  "buscar": "Search",
+  "voltar": "Back",
+
+  "produtos": "Product Not Found",
+  "produtos2": "No products found for",
+  "busca": "Search Results:",
+
+  "secoes": {
+    "configuracoes": "Settings",
+    "portal": "Self-service Portal",
+    "avaliarApp": "Rate the app"
+  },
+"routes": {
+  "user": "Profile",
+  "favorite": "Favorites"
+},
+
+  "artists": {
+    "veigh": {
+      "desc": "Veigh is the phenomenon of Brazilian trap! With Dos Prédios Deluxe and millions of streams, he’s at the top. 🎤🔥 #Veigh #Trap #BrazilianMusic"
+    },
+    "teto": {
+      "desc": "Teto is the rising voice of trap! With viral hits and a strong presence, he dominates the tracks and the scene. 🎶🚀 #Teto #TrapBR #Hitmaker"
+    },
+    "dricka": {
+      "desc": "Dricka brings power to the beat and attitude in her rhymes! Representing the streets with authenticity, she stands out in female trap and keeps evolving. 🔥🎤 #Dricka #TrapBR #GirlPower"
+    },
+    "tt": {
+      "desc": "Tasha and Tracie are the twins turning life into art! With sharp flows and unique presence, they elevate trap with style and awareness. 👯‍♀️🎧 #TashaETracie #TrapBR #SisterFlow"
+    }
+  },
+
+  "conjuntos": {
+    "1": {
+      "nome": "Virgulado Outfit",
+      "descricao": "Minimalist with attitude. The Virgulado features a white hoodie with sleeves marked by diagonal stripes and the iconic swoosh on the chest. Paired with black pants and a matching cap, it’s the perfect look for those who know style is also a language."
+    },
+    "2": {
+      "nome": "3 Stripes Kit",
+      "descricao": "The street classic in a fresh version. The 3 Stripes Kit brings Adidas’ essence with a varsity jacket, comfy t-shirt, and black pants — a combo that translates attitude, versatility, and that timeless street vibe."
+    },
+    "3": {
+      "nome": "Puma on the Chest",
+      "descricao": "With attitude in the eyes and style in the hoodie, Puma on the Chest blends comfort and personality. The standout piece has 'BLESSED' printed on the chest and represents those who play hard in fashion and in life. Perfect for those who want to wear inspiration with authenticity."
+    },
+    "4": {
+      "nome": "Sporty",
+      "descricao": "Elegance in motion. The Sporty outfit brings a rose-colored Nike polo with a light cut and athletic touch, ideal for those who value style on and off the court. A clean, sharp, and striking look."
+    },
+    "5": {
+      "nome": "Women’s Jeans",
+      "descricao": "Casual and stylish women’s look, featuring a white cropped top, oversized denim jacket, white joggers, and high-top sneakers. Perfect for an urban and laid-back vibe."
+    },
+    "6": {
+      "nome": "EVOM",
+      "descricao": "Inspired by the album that shaped the scene, the EVOM look translates luxury and realness. The burgundy studded jacket reflects power, while the accessories and the 'Venci o Mundo' cap seal the identity of those who came from art and became a reference. A drop of attitude straight from the tracks to fashion."
+    },
+    "7": {
+      "nome": "Winter Fit",
+      "descricao": "The cold arrives, style remains. Winter Fit bets on a green puffer jacket with a black hood, combining thermal comfort and strong presence. Perfect for those who face winter with personality without losing the look."
+    }
+  },
+
+  "produto": {
+    "DN": { "titulo": " - Style that Speaks Before You" }
+  },
+  "subText6": "Check it now",
+  "botaoComprar": "Buy",
+
+  "marcas": {
+    "1": {
+      "nome": "Nike",
+      "desc": "Nike is synonymous with innovation and style! With cutting-edge technology and global presence, the brand rules the streets and courts. 🏀💨 #Nike #Style #Innovation"
+    },
+    "2": {
+      "nome": "Adidas",
+      "desc": "Adidas is tradition and evolution! A reference in sports and streetwear, it turns every step into an expression of style. 👟🌍 #Adidas #Originals #StreetStyle"
+    },
+    "3": {
+      "nome": "Puma",
+      "desc": "Puma combines performance and attitude! With modern designs and exceptional comfort, the brand conquers those who live on the move. 🐆🔥 #Puma #UrbanStyle #Performance"
+    },
+    "4": {
+      "nome": "Jordan Brand",
+      "desc": "Jordan is more than a brand — it’s a legacy! Inspired by Michael Jordan, it elevates the game with authenticity and street impact. 🏀👑 #Jordan #AirJordan #Legacy"
+    }
+  }
+}

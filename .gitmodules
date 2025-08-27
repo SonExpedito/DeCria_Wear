@@ -1,0 +1,3 @@
+[submodule "webadmin"]
+	path = webadmin
+	url = https://github.com/SonExpedito/webadmin
